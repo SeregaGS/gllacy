@@ -37,17 +37,26 @@
   --font-family-regular: 'inter';
   --font-family-bold: 'inter Bold';
   --font-family-extrabold: 'inter Extra Bold';
+  /* Тень */
+  --shadow-light: 0px 4px 12px rgba(45, 52, 64, 0.1);
+  --shadow-middle: 0px 8px 16px rgba(45, 52, 64, 0.12);
+  --shadow-big: 0px 15px 40px rgba(45, 52, 64, 0.12);
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   box-sizing: border-box;
 }
-body {
+
+.main-body {
   margin: 0;
   padding: 0;
   font-family: var(--font-family-regular), sans-serif;
+  background-color: var(--additional-color-light);
 }
 
+/* Текст */
 .title-one {
   font-family: var(--font-family-extrabold), sans-serif;
   font-size: 36px;
@@ -72,4 +81,8 @@ body {
   font-family: var(--font-family-bold), sans-serif;
   font-size: 18px;
   line-height: 22px;
+}
+.container {
+  width: 1170px;
+  margin: 0 auto;
 }
