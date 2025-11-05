@@ -1,0 +1,75 @@
+@font-face {
+  font-family: 'inter';
+  src: url('../fonts/Inter-400.woff2') format('woff');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'inter Bold';
+  src: url('../fonts/Inter-700.woff2') format('woff');
+  font-weight: 700;
+}
+@font-face {
+  font-family: 'inter Extra Bold';
+  src: url('../fonts/Inter-900.woff2') format('woff');
+  font-weight: 900;
+}
+:root {
+  /* Базовый цвет */
+  --basic-color-extradark: hsla(218, 17%, 21%, 1);
+  --basic-color-dark: hsla(218, 9%, 37%, 1);
+  --basic-color-neutral: hsla(0, 0%, 73%, 1);
+  --basic-color-light: hsla(0, 0%, 91%, 1);
+  --basic-color-extralighter: hsla(0, 0%, 99%, 1);
+  --basic-color-white: hsla(0, 0%, 100%, 1);
+  /* Дополнительный цвет */
+  --additional-color-extrabright: hsla(345, 100%, 59%, 1);
+  --additional-color-bright: hsla(345, 100%, 65%, 1);
+  --additional-color-neutral: hsla(345, 100%, 73%, 1);
+  --additional-color-light: hsla(345, 98%, 84%, 1);
+  --additional-color-extralight: hsla(345, 100%, 90%, 1);
+  --additional-color-blue: hsla(214, 100%, 71%, 1);
+  --additional-color-yellow: hsla(42, 97%, 65%, 1);
+  /* Цвет статусов */
+  --status-error: hsla(0, 78%, 62%, 1);
+  --status-warning: hsla(29, 98%, 59%, 1);
+  --status-success: hsla(155, 100%, 45%, 1);
+  /* Шрифты */
+  --font-family-regular: 'inter';
+  --font-family-bold: 'inter Bold';
+  --font-family-extrabold: 'inter Extra Bold';
+}
+
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-regular), sans-serif;
+}
+
+.title-one {
+  font-family: var(--font-family-extrabold), sans-serif;
+  font-size: 36px;
+  line-height: 46px;
+}
+.title-two {
+  font-family: var(--font-family-extrabold), sans-serif;
+  font-size: 32px;
+  line-height: 46px;
+}
+.title-three {
+  font-family: var(--font-family-bold), sans-serif;
+  font-size: 24px;
+  line-height: 30px;
+}
+.title-four {
+  font-family: var(--font-family-bold), sans-serif;
+  font-size: 20px;
+  line-height: 24px;
+}
+.title-five {
+  font-family: var(--font-family-bold), sans-serif;
+  font-size: 18px;
+  line-height: 22px;
+}
