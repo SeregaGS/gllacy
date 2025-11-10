@@ -10,5 +10,55 @@
     <link rel="stylesheet" href="./style/style.css">
   </head>
   <body class="main-body">
+    <header class="main-header container">
+      <div class="container-left">
+        <a class="logo" href="">
+          <img class="logo-img" src="img/logo/logo.svg" width="137" height="56" alt="">
+        </a>
+        <nav class="menu">
+          <ul class="menu-list">
+            <li class="menu-list__item">
+              <a class="menu-list__link menu-list__link--dropdown" href="">Каталог</a>
+              <ul class="menu-list dropdown">
+                <li class="dropdown__item">
+                  <a class="dropdown-link menu-list__link--new" href="">Новинки</a>
+                </li>
+                <li class="dropdown__item">
+                  <a class="dropdown-link" href="">Сливочное</a>
+                </li>
+                <li class="dropdown__item">
+                  <a class="dropdown-link" href="">Щербеты</a>
+                </li>
+                <li class="dropdown__item">
+                  <a class="dropdown-link" href="">Фруктовый лед</a>
+                </li>
+                <li class="dropdown__item">
+                  <a class="dropdown-link" href="">Мелорин</a>
+                </li>
+              </ul>
+            </li>
+            <li class="menu-list__item">
+              <a class="menu-list__link" href="">Доставка и оплата</a>
+            </li>
+            <li class="menu-list__item">
+              <a class="menu-list__link" href="">О компании</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div class="container-right">
+        <a class="number-telephone" href="tel:+78005558628">+7 800 555-86-28</a>
+        <form class="form-search" action="" method="POST">
+          <button class="header-button form-search__button" type="button">
+            <i class="form-search__button-icon"></i>
+          </button>
+          <label class="dropdown">
+            <input class="input form-search__input" type="search" placeholder="Поиск по сайту">
+          </label>
+        </form>
+        <a class="header-button button-login" href="">Вход</a>
+        <a class="header-button button-cart" href="">2 товара</a>
+      </div>
+    </header>
   </body>
 </html>
