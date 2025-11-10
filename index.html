@@ -10,55 +10,108 @@
     <link rel="stylesheet" href="./style/style.css">
   </head>
   <body class="main-body">
-    <header class="main-header container">
-      <div class="container-left">
-        <a class="logo" href="">
-          <img class="logo-img" src="img/logo/logo.svg" width="137" height="56" alt="">
-        </a>
-        <nav class="menu">
-          <ul class="menu-list">
-            <li class="menu-list__item">
-              <a class="menu-list__link menu-list__link--dropdown" href="">Каталог</a>
-              <ul class="menu-list dropdown">
-                <li class="dropdown__item">
-                  <a class="dropdown-link menu-list__link--new" href="">Новинки</a>
+    <div class="container">
+      <header class="main-header">
+        <div class="container-left">
+          <a class="logo" href="">
+            <img class="logo-img" src="img/logo/logo.svg" width="137" height="56" alt="Gllacy - Магазин мороженного">
+          </a>
+          <nav class="menu">
+            <ul class="menu-list">
+              <li class="menu-list__item">
+                <a class="menu-list__link menu-list__link--dropdown" href="">Каталог</a>
+                <ul class="menu-list dropdown">
+                  <li class="dropdown__item">
+                    <a class="dropdown-link menu-list__link--new" href="">Новинки</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown-link" href="">Сливочное</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown-link" href="">Щербеты</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown-link" href="">Фруктовый лед</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown-link" href="">Мелорин</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-list__item">
+                <a class="menu-list__link" href="">Доставка и оплата</a>
+              </li>
+              <li class="menu-list__item">
+                <a class="menu-list__link" href="">О компании</a>
+              </li>
+            </ul>
+          </nav>
+        </div>
+        <div class="container-right">
+          <a class="number-telephone" href="tel:+78005558628">+7 800 555-86-28</a>
+          <form class="form-search" action="" method="POST">
+            <button class="header-button form-search__button" type="button">
+              <i class="form-search__button-icon">
+                <span class="visually-hidden">Кнопка поиск</span>
+              </i>
+            </button>
+            <label class="dropdown">
+              <input class="input form-search__input" id="search" type="search" placeholder="Поиск по сайту">
+            </label>
+          </form>
+          <a class="header-button button-login" href="">
+            <span class="visually-hidden">Вход в личный кабинет</span>
+            Вход
+          </a>
+          <a class="header-button button-cart" href="">
+            <span class="visually-hidden">В корзине - </span>
+            2 товара
+          </a>
+        </div>
+      </header>
+      <main class="main">
+        <h1 class="visually-hidden">Магазин мороженного - Gllacy Shop</h1>
+        <section class="slider">
+          <h2 class="visually-hidden">Топовое мороженное за неделю</h2>
+          <article class="slider__item">
+            <div class="slider__content">
+              <h3 class="slider__title">Нежный пломбир с клубничным джемом</h3>
+              <p class="slider__description">Натуральное мороженое из свежих сливок и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи. </p>
+              <a class="slider__button" href="">Заказать</a>
+            </div>
+            <div class="slider__images">
+
+            </div>
+            <footer class="slider__footer">
+              <ol class="slider__dots">
+                <li class="slider__dot"></li>
+                <li class="slider__dot"></li>
+                <li class="slider__dot"></li>
+              </ol>
+              <ul class="social">
+                <li class="social__item">
+                  <a class="social__link" href="">
+                    <span class="visually-hidden">Телеграмм</span>
+                  </a>
                 </li>
-                <li class="dropdown__item">
-                  <a class="dropdown-link" href="">Сливочное</a>
+                <li class="social__item">
+                  <a class="social__link" href="">Вконтакте</a>
                 </li>
-                <li class="dropdown__item">
-                  <a class="dropdown-link" href="">Щербеты</a>
-                </li>
-                <li class="dropdown__item">
-                  <a class="dropdown-link" href="">Фруктовый лед</a>
-                </li>
-                <li class="dropdown__item">
-                  <a class="dropdown-link" href="">Мелорин</a>
+                <li class="social__item">
+                  <a class="social__link" href="">Youtube</a>
                 </li>
               </ul>
-            </li>
-            <li class="menu-list__item">
-              <a class="menu-list__link" href="">Доставка и оплата</a>
-            </li>
-            <li class="menu-list__item">
-              <a class="menu-list__link" href="">О компании</a>
-            </li>
-          </ul>
-        </nav>
-      </div>
-      <div class="container-right">
-        <a class="number-telephone" href="tel:+78005558628">+7 800 555-86-28</a>
-        <form class="form-search" action="" method="POST">
-          <button class="header-button form-search__button" type="button">
-            <i class="form-search__button-icon"></i>
-          </button>
-          <label class="dropdown">
-            <input class="input form-search__input" type="search" placeholder="Поиск по сайту">
-          </label>
-        </form>
-        <a class="header-button button-login" href="">Вход</a>
-        <a class="header-button button-cart" href="">2 товара</a>
-      </div>
-    </header>
+            </footer>
+          </article>
+        </section>
+        <section>Gift</section>
+        <section>Goods</section>
+        <section>Banner</section>
+        <section>1</section>
+        <section>Delivery</section>
+        <section>Feedback</section>
+      </main>
+      <footer class="main-footer">Footer</footer>
+    </div>
   </body>
 </html>
