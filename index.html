@@ -71,14 +71,14 @@
       </header>
       <main class="main">
         <h1 class="visually-hidden">Магазин мороженного - Gllacy Shop</h1>
-        <section class="slider">
+        <section class="slider container-margin">
           <h2 class="visually-hidden">Топовое мороженное за неделю</h2>
           <div class="slider__list">
             <article class="slider__item">
               <div class="slider__content">
-                <h3 class="slider__title">Нежный пломбир с клубничным джемом</h3>
+                <h3 class="slider__title title-one">Нежный пломбир с клубничным джемом</h3>
                 <p class="slider__description">Натуральное мороженое из свежих сливок и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи. </p>
-                <a class="slider__button button" href="">Заказать</a>
+                <a class="slider__button button button--load" href="">Заказать</a>
               </div>
             </article>
             <div class="slider__images">
@@ -86,7 +86,7 @@
                 <li class="slider__images-item slider__images-item--active">
                   <picture class="slider__picture">
                     <source type="image/webp" srcset="img/slider/slider-1.webp, img/slider/slider-1@2x.webp 2x">
-                    <img src="img/slider/slider-1.png" srcset="img/slider/slider-1@2x.png 2x" width="328" height="507" alt="Пломбир с клубничным джемом">
+                    <img src="img/slider/slider-1.png" srcset="img/slider/slider-1@2x.png 2x" height="150" alt="Пломбир с клубничным джемом">
                   </picture>
                 </li>
                 <li class="slider__images-item">
@@ -110,30 +110,40 @@
                   <span class="visually-hidden">Следующий слайд</span>
                 </button>
               </div>
+
             </div>
           </div>
           <footer class="slider__footer">
             <ol class="slider__dots">
-              <li class="slider__dot"></li>
-              <li class="slider__dot"></li>
-              <li class="slider__dot"></li>
+              <li class="slider__dot slider__dot--active" tabindex="0"></li>
+              <li class="slider__dot" tabindex="0"></li>
+              <li class="slider__dot" tabindex="0"></li>
             </ol>
             <ul class="social">
               <li class="social__item">
                 <a class="social__link" href="">
+                  <i class="social__icon social__icon--telegram"></i>
                   <span class="visually-hidden">Телеграмм</span>
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link" href="">Вконтакте</a>
+                <a class="social__link" href="">
+                  <i class="social__icon social__icon--vk"></i>
+                  <span class="visually-hidden">Вконтакте</span>
+                </a>
               </li>
               <li class="social__item">
-                <a class="social__link" href="">Youtube</a>
+                <a class="social__link" href="">
+                  <i class="social__icon social__icon--youtube"></i>
+                  <span class="visually-hidden">Youtube</span>
+                </a>
               </li>
             </ul>
           </footer>
         </section>
-        <section>Gift</section>
+        <section class="gifts container-margin">
+          <h2 class="gifts__title">Заказывайте мороженое и получайте подарки!</h2>
+        </section>
         <section>Goods</section>
         <section>Banner</section>
         <section>1</section>
