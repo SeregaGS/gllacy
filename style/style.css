@@ -693,3 +693,47 @@
   background-image: url('../img/icons/youtube.svg');
 }
 
+/* GIFTS */
+.gifts__title {
+  max-width: 434px;
+  margin: 0 auto 55px auto;
+  text-align: center;
+}
+.gifts__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+}
+.gift {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 219px;
+  align-items: center;
+  border-radius: 16px;
+  background-color: var(--additional-color-neutral);
+  overflow: hidden;
+}
+.gift__content {
+  padding: 36px 0 18px 36px;
+}
+.gift__title {
+  margin: 0 0 24px 0;
+}
+.gift__description {
+  margin: 0 0 28px 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--basic-color-extradark);
+}
+.gift__link {
+  margin: 0 0 18px 0;
+}
+.gift__media {
+  display: flex;
+  align-items: end;
+  height: 100%;
+}
+.gift__image {
+  display: flex;
+}
+
