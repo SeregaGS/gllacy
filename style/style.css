@@ -139,6 +139,7 @@
   background-color: var(--basic-color-white);
   transition: background-color 0.2s, outline 0.2s;
   cursor: pointer;
+  user-select: none;
 }
 .button:hover {
   outline-color: var(--basic-color-white);
