@@ -53,7 +53,9 @@
 *:after {
   box-sizing: border-box;
 }
-
+img  {
+  pointer-events: none;
+}
 .main-body {
   margin: 0;
   padding: 0;
