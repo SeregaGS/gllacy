@@ -855,4 +855,5 @@ img  {
 .product__image {
   object-fit: cover;
   border-radius: 50%;
+  box-shadow: var(--shadow-light);
 }
