@@ -857,3 +857,81 @@ img  {
   border-radius: 50%;
   box-shadow: var(--shadow-light);
 }
+/* ADVANTAGES */
+.advantages__container {
+  padding-top: 24px;
+}
+.advantages {
+  position: relative;
+  margin: 24px;
+  padding: 56px 40px 36px 40px;
+  border-radius: 16px;
+  background-color: var(--basic-color-white);
+}
+.advantages::before {
+  content: '';
+  position: absolute;
+  top: -24px;
+  bottom: -24px;
+  left: -24px;
+  right: -24px;
+  border-radius: inherit;
+  background-image: url('../img/background/wafer-full.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -10;
+}
+.advantages__title {
+  margin: 0 0 56px 0;
+  text-align: center;
+}
+.advantages__list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(505px, 1fr));
+  margin: 0 0 20px 0;
+  padding: 0 0 0 0;
+  list-style-type: none;
+  gap: 40px 32px;
+}
+.advantages__item {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  column-gap: 16px;
+}
+.advantages__description {
+  margin: 0;
+  font-size: 16px;
+  line-height: 22px;
+  color: var(--basic-color-dark);
+}
+.advantages__icon-wrapper {
+  order: -1;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  outline: 2px solid var(--basic-color-extradark);
+  outline-offset: -2px;
+}
+.advantages__icon {
+  display: inline;
+  width: 32px;
+  height: 32px;
+  background-position: center;
+  background-size: contain;
+}
+.advantages__icon--icecream {
+  background-image: url("../img/icons/ice-cream.svg");
+}
+.advantages__icon--cow {
+  background-image: url("../img/icons/cow.svg");
+}
+.advantages__icon--leaf {
+  background-image: url("../img/icons/leaf.svg");
+}
+.advantages__icon--thermometer {
+  background-image: url("../img/icons/thermometer.svg");
+}
+
