@@ -972,3 +972,70 @@ img  {
   background-image: url("../img/icons/thermometer.svg");
 }
 
+.post-subscribe {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+/* NEW POST */
+.new-post {
+  padding: 32px 32px 46px 32px;
+  border-radius: 16px;
+  background-color: var(--basic-color-white);
+  background-image: url("../img/background/post-1.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 60px -94px;
+}
+.new-post__label {
+  display: flex;
+  font-size: 16px;
+  color: var(--basic-color-dark);
+  margin: 0 0 12px 0;
+}
+.new-post__link {
+  display: flex;
+  max-width: 303px;
+  text-decoration: none;
+  color: var(--basic-color-extradark);
+}
+.new-post__title {
+  margin: 0 0 24px 0;
+}
+/* SUBSCRIBE */
+.subscribe {
+  position: relative;
+  margin: 6px;
+  padding: 26px;
+  border-radius: 16px;
+  background-color: var(--basic-color-white);
+}
+.subscribe::before {
+  content: '';
+  position: absolute;
+  top: -6px;
+  bottom: -6px;
+  left: -6px;
+  right: -6px;
+  z-index: -15;
+  background-image: url("../img/background/subscription-full.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: inherit;
+}
+.subscribe__description {
+  margin: 0 0 40px 0;
+  line-height: 22px;
+  color: var(--basic-color-dark);
+}
+.subscribe__form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  column-gap: 14px;
+}
+.subscribe__input {
+  width: 100%;
+  padding-top: 13px;
+  padding-bottom: 13px;
+}
