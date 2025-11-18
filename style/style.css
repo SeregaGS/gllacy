@@ -60,6 +60,9 @@ img  {
   margin: 0;
   padding: 0;
   font-family: var(--font-family-regular), sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--basic-color-extradark);
   background-color: var(--additional-color-light);
   overflow-x: hidden;
 }
