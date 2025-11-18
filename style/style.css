@@ -165,7 +165,41 @@ img  {
   color: var(--basic-color-neutral);
   background-color: var(--basic-color-light);
 }
-
+.button-other {
+  padding: 12px 32px;
+  font-family: var(--font-family-bold), sans-serif;
+  font-size: 16px;
+  line-height: 20px;
+  color: var(--basic-color-white);
+  border: none;
+  border-radius: 26px;
+  background-color: var(--additional-color-extrabright);
+  outline: 4px solid var(--additional-color-extralight);
+  cursor: pointer;
+  transition: background-color 0.15s, outline-color 0.15s;
+}
+.button-other:hover:not(:disabled) {
+  color: var(--basic-color-extradark);
+  background-color: transparent;
+  outline-color: var(--additional-color-extrabright);
+}
+.button-other:active:not(:disabled) {
+  background-color: var(--additional-color-light);
+  outline-width: 2px;
+  outline-color: var(--basic-color-extradark);
+  outline-offset: -2px;
+}
+.button-other:focus:not(:active) {
+  outline-width: 2px;
+  outline-color: var(--basic-color-extradark);
+  outline-offset: -2px;
+}
+.button-other:disabled {
+  color: var(--basic-color-dark);
+  background-color: var(--basic-color-neutral);
+  outline-color: var(--basic-color-light);
+  cursor: auto;
+}
 /* FORM */
 .input {
   padding: 14px 16px;
