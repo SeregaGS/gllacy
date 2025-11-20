@@ -1191,3 +1191,58 @@ img  {
   border-style: solid;
   border-color: transparent var(--basic-color-white) transparent transparent;
 }
+
+/* CONTACTS */
+.contacts-wrapper {
+  padding: 64px;
+  border-radius: 16px;
+  background-color: var(--basic-color-white);
+  background-image: image-set(
+    url("../img/background/address.webp") 1x,
+    url("../img/background/address.jpg") 1x
+  );
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.contacts {
+  padding: 40px;
+  border-radius: 16px;
+  background-color: var(--basic-color-white);
+}
+
+.contacts-container {
+  max-width: 343px;
+}
+
+.contacts__title {
+  margin: 0 0 12px 0;
+  font-family: var(--font-family-regular), sans-serif;
+  font-size: 16px;
+  line-height: 22px;
+  font-weight: normal;
+  font-style: normal;
+  color: var(--basic-color-dark);
+}
+
+.contacts__address {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+  font-style: normal;
+}
+
+.contacts__street {
+  margin: 0 0 24px 0;
+
+}
+
+.contacts__info {
+  display: flex;
+  flex-direction: column;
+}
+
+.contacts__telephone {
+  color: var(--basic-color-extradark);
+  text-decoration: none;
+}
