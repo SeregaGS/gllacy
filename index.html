@@ -318,7 +318,53 @@
             </form>
           </article>
         </div>
-        <section>Delivery</section>
+        <section class="delivery delivery-wrapper container-margin" >
+          <div class="delivery__content">
+            <h2 class="delivery__title title-two">Доставка любимого мороженого на дом</h2>
+            <p class="delivery__description">
+              Хочется полакомиться любимым десертом, но нет времени съездить в магазин?
+              Закажите доставку мороженого на дом, и курьер привезёт вам ваш заказ в течение часа!
+            </p>
+          </div>
+          <form class="delivery-form" action="/" method="POST">
+            <fieldset class="delivery-form__fieldset">
+              <legend class="delivery-form__legend">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</legend>
+              <div class="delivery-form__wrapper">
+                <div class="delivery-form__date">
+                  <div class="delivery-form__label" >
+                    <label>Дата</label>
+                    <div class="tooltip">
+                      <button class="tooltip__button" type="button">
+                        <span class="visually-hidden">Информация</span>
+                      </button>
+                      <span class="tooltip__info">Введите дату в формате день.месяц.год</span>
+                    </div>
+                  </div>
+                  <input class="input delivery-form__input" type="text" placeholder="01.04.2020" required>
+                </div>
+                <div class="delivery-form__telephone">
+                  <label class="delivery-form__label">
+                    <span>Телефон</span>
+                  </label>
+                  <input class="input delivery-form__input" type="text" placeholder="+7 800 999-00-00" required>
+                </div>
+                <div class="delivery-form__address">
+                  <div class="delivery-form__label">
+                    <label>Адрес</label>
+                    <div class="tooltip">
+                      <button class="tooltip__button" type="button">
+                        <span class="visually-hidden">Информация</span>
+                      </button>
+                      <span class="tooltip__info">Введите название улицы, дома и квартиры</span>
+                    </div>
+                  </div>
+                  <input class="input delivery-form__input" type="text" placeholder="ул. Большая Конюшенная, 19/8" required>
+                </div>
+              </div>
+            </fieldset>
+            <button class="button-other" type="submit">Отправить</button>
+          </form>
+        </section>
         <section>Feedback</section>
       </main>
       <footer class="main-footer">Footer</footer>
