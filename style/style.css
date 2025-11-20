@@ -1246,3 +1246,57 @@ img  {
   color: var(--basic-color-extradark);
   text-decoration: none;
 }
+/* FOOTER */
+.main-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 48px 0;
+}
+/* FOOTER MENU */
+.footer-menu {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+.footer-menu__item {
+  display: flex;
+}
+.footer-menu__link {
+  font-size: 14px;
+  line-height: 20px;
+  color: var(--basic-color-extradark);
+  text-decoration: none;
+}
+.footer-menu__item--favorite {
+  position: relative;
+  font-family: var(--font-family-bold), sans-serif;
+}
+.footer-menu__item--favorite::before {
+  content: '';
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  top: 10%;
+  left: -22px;
+  background-image: url("../img/icons/heart-fill.svg");
+}
+/* COPYRIGHT */
+.copyright {
+
+}
+.copyright__logo-link {
+  display: inline-flex;
+  margin-bottom: 8px;
+}
+.copyright__text {
+  margin: 0;
+  font-size: 12px;
+  height: 16px;
+  color: var(--basic-color-extradark);
+}
+.copyright__link {
+  color: inherit;
+  text-decoration: none;
+}
