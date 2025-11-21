@@ -289,7 +289,6 @@ img  {
   mask-position: center;
   background-color: var(--basic-color-extradark);
 }
-
 /* HEADER */
 .main-header {
   padding-top: 24px;
@@ -347,12 +346,6 @@ img  {
   width: calc(100% - 5px);
   height: 1px;
   background-color: var(--basic-color-neutral);
-}
-.dropdown--active {
-  opacity: 1;
-  min-height: 100%;
-  visibility: visible;
-  pointer-events: auto;
 }
 /* MENU */
 .menu {
@@ -417,6 +410,12 @@ img  {
   color: var(--basic-color-white);
   background-color: var(--additional-color-bright);
 }
+.menu-list__link--active ~ .dropdown {
+  opacity: 1;
+  min-height: 100%;
+  visibility: visible;
+  pointer-events: auto;
+}
 .menu-list__link--active:hover {
   opacity: 0.6;
 }
@@ -431,6 +430,7 @@ img  {
   transform: rotate(180deg);
   background-color: var(--basic-color-white);
 }
+
 /* TELEPHONE */
 .number-telephone {
   font-family: var(--font-family-bold), sans-serif;
@@ -466,6 +466,12 @@ img  {
 }
 .header-button--active .form-search__button-icon {
   background-color: var(--basic-color-white);
+}
+.header-button--active ~ .dropdown{
+  opacity: 1;
+  min-height: 100%;
+  visibility: visible;
+  pointer-events: auto;
 }
 .form-search .dropdown {
   padding: 24px 16px;
