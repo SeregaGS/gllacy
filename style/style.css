@@ -776,6 +776,7 @@ img  {
 /* GIFTS */
 .gifts {
   margin-top: -1px;
+  word-break: break-word;
 }
 .gifts__title {
   max-width: 434px;
@@ -789,8 +790,8 @@ img  {
 }
 .gift {
   position: relative;
-  display: grid;
-  grid-template-columns: 1fr 219px;
+  display: flex;
+  align-items: center;
   border-radius: 16px;
   background-color: var(--additional-color-neutral);
   overflow: hidden;
