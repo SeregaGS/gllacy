@@ -133,6 +133,11 @@ img  {
 .container-margin {
   margin-bottom: 80px;
 }
+.container-main {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
 
 .body-overlay {
   overflow: hidden;
@@ -317,7 +322,6 @@ img  {
   padding-bottom: 24px;
   display: grid;
   grid-template-columns: 1fr minmax(435px, 35%);
-  /*justify-content: space-between;*/
   column-gap: 16px;
 }
 /* LOGO */
@@ -633,7 +637,7 @@ img  {
   text-align: center;
 }
 .dropdown-cart__currency {
-  font-family: 'inter Rub';
+  font-family: 'inter Rub', sans-serif;
 }
 .dropdown-cart__delete {
   flex: 0 0 16px;
@@ -650,6 +654,10 @@ img  {
 .dropdown-cart__total-price .dropdown-cart__total {
   text-align: right;
   margin: 2px 0 0 0;
+}
+/* MAIN */
+.main {
+  flex-grow: 1;
 }
 /* SLIDER */
 .slider {
@@ -1495,7 +1503,7 @@ img  {
 }
 .footer-menu__item {
   display: flex;
-  margin: 0 0px 8px 24px;
+  margin: 0 0 8px 24px;
 }
 .footer-menu__link {
   font-size: 14px;
