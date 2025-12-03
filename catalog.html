@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=1170" />
+  <title>HTML Academy: Gllacy - Сливочное мороженое</title>
+  <link rel="icon" type="image/png" href="img/favicon/32.png">
+  <link rel="icon" type="image/svg+xml" href="img/favicon/32.svg">
+  <link rel="apple-touch-icon" href="img/favicon/152.png">
+  <link rel="stylesheet" href="./style/style.css">
+</head>
+<!-- в body добавить класс body-overlay добавить для отображения modal в overlay  -->
+<body class="main-body">
+<div class="container container-main">
+  <header class="main-header">
+    <div class="container-left">
+      <a class="logo" href="">
+        <img class="logo-img" src="img/logo/logo.svg" width="137" height="56" alt="Gllacy - Магазин мороженного">
+      </a>
+      <nav class="menu">
+        <ul class="menu-list">
+          <li class="menu-list__item">
+            <!-- Чтобы открыть dropdown, нужно добавить класс menu-list__link--active -->
+            <a class="menu-list__link menu-list__link--dropdown" href="">Каталог</a>
+            <ul class="menu-list dropdown">
+              <li class="dropdown__item">
+                <a class="dropdown-link dropdown-link--new" href="">Новинки</a>
+              </li>
+              <li class="dropdown__item">
+                <a class="dropdown-link" href="">Сливочное</a>
+              </li>
+              <li class="dropdown__item">
+                <a class="dropdown-link" href="">Щербеты</a>
+              </li>
+              <li class="dropdown__item">
+                <a class="dropdown-link" href="">Фруктовый лед</a>
+              </li>
+              <li class="dropdown__item">
+                <a class="dropdown-link" href="">Мелорин</a>
+              </li>
+            </ul>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="">Доставка и оплата</a>
+          </li>
+          <li class="menu-list__item">
+            <a class="menu-list__link" href="">О компании</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container-right">
+      <a class="number-telephone" href="tel:+78005558628">+7 800 555-86-28</a>
+      <form class="form-search" action="/" method="POST">
+        <!-- Чтобы открыть dropdown, нужно добавить класс header-button--active -->
+        <button class="header-button form-search__button" type="button">
+          <i class="form-search__button-icon">
+            <span class="visually-hidden">Кнопка поиск</span>
+          </i>
+        </button>
+        <label class="dropdown">
+          <input class="input form-search__input" id="search" type="search" placeholder="Поиск по сайту">
+        </label>
+      </form>
+      <div class="container-login">
+        <a class="header-button button-login" href="">
+          <span class="visually-hidden">Вход в личный кабинет</span>
+          Вход
+        </a>
+        <div class="dropdown dropdown-login">
+          <p class="title-three dropdown-login__title">Личный кабинет</p>
+          <form class="dropdown-login__form" action="/" method="POST">
+            <label class="visually-hidden" for="email-login">
+              Введите email
+            </label>
+            <input class="input dropdown-login__input" id="email-login" type="email" name="email-login" placeholder="email@example.com" required>
+            <label class="visually-hidden" for="password-login">
+              Введите ваш пароль
+            </label>
+            <input class="input dropdown-login__input" id="password-login" type="password" name="password-login" autocomplete="off" required>
+            <div class="dropdown-login__buttons">
+              <a class="button-other dropdown-login__button" href="">Войти</a>
+              <div class="dropdown-login__forgot">
+                <a class="dropdown-login__link" href="">Забыли пароль?</a>
+                <a class="dropdown-login__link" href="">Регистрация</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="container-cart">
+        <!-- Чтобы показать dropdown для карты добавить header-button--active -->
+        <a class="header-button button-cart" href="#cart">
+          <span class="visually-hidden">В корзине - </span>
+          2 товара
+        </a>
+        <div class="dropdown dropdown-cart">
+          <p class="dropdown__title title-three">Корзина</p>
+          <ul class="dropdown-cart__list">
+            <li class="dropdown-cart__item">
+              <div class="dropdown-cart__info">
+                <p class="title-five dropdown-cart__title">Малинка</p>
+                <p class="dropdown-cart__calculate">1 кг х 310 ₽</p>
+              </div>
+              <picture class="dropdown-cart__media">
+                <source type="image/webp" srcset="img/product/product-1.webp, img/product/product-1@2x.webp 2x">
+                <img class="dropdown-cart__image" src="img/product/product-1.png" srcset="img/product/product-1@2x.png 2x" width="46" height="46" alt="">
+              </picture>
+              <p class="title-five dropdown-cart__total">310
+                <span class="dropdown-cart__currency">₽</span>
+              </p>
+              <button class="button-close dropdown-cart__delete" type="button"></button>
+            </li>
+            <li class="dropdown-cart__item">
+              <div class="dropdown-cart__info">
+                <p class="title-five dropdown-cart__title">Бабл-гам</p>
+                <p class="dropdown-cart__calculate">1,5 кг х 320 ₽</p>
+              </div>
+              <picture class="dropdown-cart__media">
+                <source type="image/webp" srcset="img/product/product-4.webp, img/product/product-4@2x.webp 2x">
+                <img class="dropdown-cart__image" src="img/product/product-4.png" srcset="img/product/product-4@2x.png 2x" width="46" height="46" alt="">
+              </picture>
+              <p class="title-five dropdown-cart__total">480
+                <span class="dropdown-cart__currency">₽</span>
+              </p>
+              <button class="button-close dropdown-cart__delete" type="button"></button>
+            </li>
+          </ul>
+          <div class="dropdown-cart__total-price">
+            <a class="button-other dropdown-cart__button" href="#order">Оформить заказ</a>
+            <p class="dropdown-cart__total title-five">
+              <span>Итого:</span>
+              <span>790 <span class="dropdown-cart__currency">₽</span></span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <main class="main">
+
+  </main>
+  <footer class="main-footer" >
+    <ul class="social main-footer__social">
+      <li class="social__item">
+        <a class="social__link" href="https://t.me/htmlacademy">
+          <i class="social__icon social__icon--telegram"></i>
+          <span class="visually-hidden">Телеграмм</span>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="https://vk.com/htmlacademy">
+          <i class="social__icon social__icon--vk"></i>
+          <span class="visually-hidden">Вконтакте</span>
+        </a>
+      </li>
+      <li class="social__item">
+        <a class="social__link" href="https://www.youtube.com/user/htmlacademyru">
+          <i class="social__icon social__icon--youtube"></i>
+          <span class="visually-hidden">Youtube</span>
+        </a>
+      </li>
+    </ul>
+    <ul class="footer-menu">
+      <li class="footer-menu__item footer-menu__item--favorite">
+        <a class="footer-menu__link" href="">Для поставщиков</a>
+      </li>
+      <li class="footer-menu__item">
+        <a class="footer-menu__link" href="">Наши документы</a>
+      </li>
+      <li class="footer-menu__item ">
+        <a class="footer-menu__link" href="">О производстве</a>
+      </li>
+      <li class="footer-menu__item">
+        <a class="footer-menu__link" href="">Экологические стандарты</a>
+      </li>
+    </ul>
+    <div class="copyright">
+      <a class="copyright__logo-link" href="https://htmlacademy.ru/">
+        <img class="copyright__logo-img" src="img/logo/logo_htmlacademy.svg" alt="" width="93" height="27">
+      </a>
+      <p class="copyright__text">
+        Сделано в <a class="copyright__link" href="https://htmlacademy.ru/">.html academy</a> © 2021
+      </p>
+    </div>
+  </footer>
+</div>
+<!-- убрать класс modal--hidden и добавить класс modal--show для отображения modal -->
+<div class="modal modal--hidden">
+  <div class="modal__overlay"></div>
+  <div class="modal__container">
+    <h2 class="modal__title title-three">Мы обязательно ответим вам!</h2>
+    <form class="modal__form" action="/" method="POST">
+      <label class="visually-hidden" for="name-modal">
+        Введите ваше Имя и Фамилию
+      </label>
+      <input class="input modal__input" id="name-modal" type="text" name="name" placeholder="Имя и фамилия" required>
+      <label class="visually-hidden" for="email-modal">
+        Введите ваш email
+      </label>
+      <input class="input modal__input" id="email-modal" type="email" name="email" placeholder="email@example.com" required>
+      <label class="visually-hidden" for="message">
+        Введите сообщение в свободной форме
+      </label>
+      <textarea class="input modal__textarea" id="message" name="message" placeholder="В свободной форме" required></textarea>
+      <button class="button-other modal__button" type="submit">Отправить</button>
+    </form>
+    <button class="button-close modal__button-close" type="button">
+    </button>
+  </div>
+</div>
+</body>
+</html>
