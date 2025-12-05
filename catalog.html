@@ -154,6 +154,99 @@
           </li>
         </ul>
       </header>
+      <form class="filter" action="/" method="GET">
+        <fieldset class="filter__container">
+          <legend class="visually-hidden">Сортировка:</legend>
+          <label for="sort_by" class="filter__title" aria-hidden="true">Сортировка:</label>
+          <select class="filter__container-input select" name="sort-by" id="sort_by">
+            <option value="popularity" selected>по популярности</option>
+            <option value="price">по цене</option>
+          </select>
+        </fieldset>
+        <fieldset class="filter__container toggle-price">
+          <legend class="visually-hidden">Цена:</legend>
+          <div class="toggle-price__minmax">
+            <span class="filter__title" aria-hidden="true">Цена:</span>
+            <label class="toggle-price__min">
+              <span class="visually-hidden">от</span>
+              <input class="toggle-price__min-input" type="number" name="min-price-range" value="100" min="100" max="500">
+            </label>
+            <label class="toggle-price__max">
+              <span class="visually-hidden">до</span>
+              <input class="toggle-price__max-input" type="number" name="max-price-range" value="500" min="100" max="500">
+            </label>
+          </div>
+          <div class="filter__container-input">
+            <div class="toggle-range">
+              <div class="toggle-range__slider">
+                <div class="toggle-range__visual-total"></div>
+              </div>
+              <button class="toggle-range__button toggle-range__button--min" type="button">
+                <span class="visually-hidden">Изменить минимальную цену</span>
+              </button>
+              <button class="toggle-range__button toggle-range__button--max" type="button">
+                <span class="visually-hidden">Изменить максимальную цену</span>
+              </button>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="filter__container">
+          <legend class="filter__title">Жирность:</legend>
+          <div class="filter__container-input radio">
+            <label class="radio__container">
+              <input class="visually-hidden" type="radio" name="fat-content" value="0">
+              <span class="radio__input"></span>
+              <span class="radio__value">0%</span>
+            </label>
+            <label class="radio__container">
+              <input class="visually-hidden" type="radio" name="fat-content" value="10" checked>
+              <span class="radio__input"></span>
+              <span class="radio__value">до 10% </span>
+            </label>
+            <label class="radio__container">
+              <input class="visually-hidden" type="radio" name="fat-content" value="30">
+              <span class="radio__input"></span>
+              <span class="radio__value">до 30% </span>
+            </label>
+            <label class="radio__container">
+              <input class="visually-hidden" type="radio" name="fat-content" value="30+">
+              <span class="radio__input"></span>
+              <span class="radio__value">выше 30%</span>
+            </label>
+          </div>
+        </fieldset>
+        <fieldset class="filter__container">
+          <legend class="filter__title">Наполнители:</legend>
+          <div class="filter__container-input checkbox">
+            <label class="checkbox__container">
+              <input class="visually-hidden" type="checkbox" name="fillers" value="chocolate" checked>
+              <span class="checkbox__input"></span>
+              <span class="checkbox__value">шоколадные</span>
+            </label>
+            <label class="checkbox__container">
+              <input class="visually-hidden" type="checkbox" name="fillers" value="sugar-sprinkles" checked>
+                <span class="checkbox__input"></span>
+              <span class="checkbox__value">сахарные посыпки</span>
+            </label>
+            <label class="checkbox__container">
+              <input class="visually-hidden" type="checkbox" name="fillers" value="fruits">
+              <span class="checkbox__input"></span>
+              <span class="checkbox__value">фрукты</span>
+            </label>
+            <label class="checkbox__container">
+              <input class="visually-hidden" type="checkbox" name="fillers" value="syrups">
+              <span class="checkbox__input"></span>
+              <span class="checkbox__value">сиропы</span>
+            </label>
+            <label class="checkbox__container">
+              <input class="visually-hidden" type="checkbox" name="fillers" value="jams">
+              <span class="checkbox__input"></span>
+              <span class="checkbox__value">джемы</span>
+            </label>
+          </div>
+        </fieldset>
+        <button class="button filter__button" type="submit">Применить</button>
+      </form>
     </section>
   </main>
   <footer class="main-footer" >
