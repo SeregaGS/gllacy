@@ -143,8 +143,9 @@ input[type="number"] {
   margin-bottom: 80px;
 }
 .container-main {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  /*flex-direction: column;*/
   min-height: 100vh;
 }
 
@@ -336,6 +337,7 @@ input[type="number"] {
   display: grid;
   grid-template-columns: 1fr minmax(435px, 35%);
   column-gap: 16px;
+  grid-row: 1 / 2;
 }
 /* LOGO */
 .logo {
@@ -670,7 +672,8 @@ input[type="number"] {
 }
 /* MAIN */
 .main {
-  flex-grow: 1;
+  /*flex-grow: 1;*/
+  grid-row: 2 / 3;
 }
 /* SLIDER */
 .slider {
@@ -1499,6 +1502,7 @@ input[type="number"] {
   justify-content: space-between;
   gap: 16px;
   padding: 46px 0;
+  grid-row: 3 / 4;
 }
 /* FOOTER SOCIAL */
 .main-footer__social {
