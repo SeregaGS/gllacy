@@ -1,45 +1,45 @@
-const openDropdown = (menu, button, activeClass) => {
-  let isOpen = button.dataset.open === "true";
-  const openDropdown = menu.querySelector('[data-open="true"]');
+const header = document.querySelector('.main-header');
+const headerMenu = header.querySelector('.menu-list');
+const headerMenuSearch = document.querySelector('.form-search__button');
+const headerMenuLogin = document.querySelector('.button-login');
+const headerMenuCart = document.querySelector('.button-cart');
 
-  if(openDropdown && openDropdown !== button) {
-    openDropdown.dataset.open = "false";
-    openDropdown.classList.remove(activeClass);
-  }
-  button.classList.toggle(activeClass);
-  button.dataset.open = isOpen ? "false" : "true";
+const closeModal = () => {
+  header.querySelectorAll('[data-open="true"]').forEach((el) => {
+    el.dataset.open = "false";
+    el.classList.remove('menu-list__link--active', 'header-button--active');
+  })
 }
+const openDropdown = (button, activeClass) => {
+  const isOpen = button.dataset.open === "true";
 
-const menu = document.querySelector('.menu-list');
+  closeModal();
 
-menu.addEventListener('click', (e) => {
+  if(!isOpen) {
+    button.dataset.open = "true";
+    button.classList.add(activeClass);
+  }
+};
+
+
+headerMenu.addEventListener('click', (e) => {
   const clickLink = e.target;
   if(!clickLink.classList.contains('menu-list__link--dropdown')) { return }
   e.preventDefault();
-  openDropdown(menu, clickLink, 'menu-list__link--active');
+  openDropdown(clickLink, 'menu-list__link--active');
 })
-const formSearch = document.querySelector('.form-search__button');
-
-formSearch.addEventListener('click', (e) => {
+headerMenuSearch.addEventListener('click', (e) => {
   const clickLink = e.target;
   e.preventDefault();
-  console.log(clickLink)
-  openDropdown(formSearch, clickLink, 'header-button--active');
+  openDropdown(clickLink, 'header-button--active');
 })
-
-const buttonLogin = document.querySelector('.button-login');
-
-buttonLogin.addEventListener('click', (e) => {
+headerMenuLogin.addEventListener('click', (e) => {
   const clickLink = e.target;
   e.preventDefault();
-  console.log(clickLink)
-  openDropdown(buttonLogin, clickLink, 'header-button--active');
+  openDropdown(clickLink, 'header-button--active');
 })
-const buttonCart = document.querySelector('.button-cart');
-
-buttonCart.addEventListener('click', (e) => {
+headerMenuCart.addEventListener('click', (e) => {
   const clickLink = e.target;
   e.preventDefault();
-  console.log(clickLink)
-  openDropdown(buttonLogin, clickLink, 'header-button--active');
+  openDropdown(clickLink, 'header-button--active');
 })
