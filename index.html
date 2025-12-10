@@ -23,19 +23,19 @@
                 <a href="" class="menu-list__link menu-list__link--dropdown">Каталог</a>
                 <ul class="menu-list dropdown">
                   <li class="dropdown__item">
-                    <a class="dropdown-link dropdown-link--new" href="">Новинки</a>
+                    <a class="dropdown-link dropdown-link--new">Новинки</a>
                   </li>
                   <li class="dropdown__item">
-                    <a class="dropdown-link" href="">Сливочное</a>
+                    <a class="dropdown-link" href="#product">Сливочное</a>
                   </li>
                   <li class="dropdown__item">
-                    <a class="dropdown-link" href="">Щербеты</a>
+                    <a class="dropdown-link" href="#product">Щербеты</a>
                   </li>
                   <li class="dropdown__item">
-                    <a class="dropdown-link" href="">Фруктовый лед</a>
+                    <a class="dropdown-link" href="#product">Фруктовый лед</a>
                   </li>
                   <li class="dropdown__item">
-                    <a class="dropdown-link" href="">Мелорин</a>
+                    <a class="dropdown-link" href="#product">Мелорин</a>
                   </li>
                 </ul>
               </li>
@@ -51,11 +51,8 @@
         <div class="container-right">
           <a class="number-telephone" href="tel:+78005558628">+7 800 555-86-28</a>
           <form class="form-search" action="/" method="POST">
-            <!-- Чтобы открыть dropdown, нужно добавить класс header-button--active -->
             <button class="header-button form-search__button" type="button">
-              <i class="form-search__button-icon">
-                <span class="visually-hidden">Кнопка поиск</span>
-              </i>
+              <span class="visually-hidden">Кнопка поиск</span>
             </button>
             <label class="dropdown">
               <input class="input form-search__input" id="search" type="search" placeholder="Поиск по сайту">
@@ -78,7 +75,7 @@
                 </label>
                 <input class="input dropdown-login__input" id="password-login" type="password" name="password-login" autocomplete="off" required>
                 <div class="dropdown-login__buttons">
-                  <a class="button-other dropdown-login__button" href="">Войти</a>
+                  <button class="button-other dropdown-login__button" type="submit">Войти</button>
                   <div class="dropdown-login__forgot">
                     <a class="dropdown-login__link" href="">Забыли пароль?</a>
                     <a class="dropdown-login__link" href="">Регистрация</a>
@@ -88,7 +85,6 @@
             </div>
           </div>
           <div class="container-cart">
-            <!-- Чтобы показать dropdown для карты добавить header-button--active -->
             <a class="header-button button-cart" href="#cart">
               <span class="visually-hidden">В корзине - </span>
               2 товара
@@ -103,12 +99,16 @@
                   </div>
                   <picture class="dropdown-cart__media">
                     <source type="image/webp" srcset="img/product/product-1.webp, img/product/product-1@2x.webp 2x">
-                    <img class="dropdown-cart__image" src="img/product/product-1.png" srcset="img/product/product-1@2x.png 2x" width="46" height="46" alt="">
+                    <img class="dropdown-cart__image" src="img/product/product-1.png" srcset="img/product/product-1@2x.png 2x" width="46" height="46" alt="Мороженое - Малинка">
                   </picture>
                   <p class="title-five dropdown-cart__total">310
                     <span class="dropdown-cart__currency">₽</span>
                   </p>
-                  <button class="button-close dropdown-cart__delete" type="button"></button>
+                  <button class="button-close dropdown-cart__delete" type="button">
+                    <span class="visually-hidden">
+                      Удалить товар
+                    </span>
+                  </button>
                 </li>
                 <li class="dropdown-cart__item">
                   <div class="dropdown-cart__info">
@@ -117,7 +117,7 @@
                   </div>
                   <picture class="dropdown-cart__media">
                     <source type="image/webp" srcset="img/product/product-4.webp, img/product/product-4@2x.webp 2x">
-                    <img class="dropdown-cart__image" src="img/product/product-4.png" srcset="img/product/product-4@2x.png 2x" width="46" height="46" alt="">
+                    <img class="dropdown-cart__image" src="img/product/product-4.png" srcset="img/product/product-4@2x.png 2x" width="46" height="46" alt="Мороженое Бабл-гам">
                   </picture>
                   <p class="title-five dropdown-cart__total">480
                     <span class="dropdown-cart__currency">₽</span>
@@ -144,8 +144,8 @@
             <article class="slider__item">
               <div class="slider__content">
                 <h3 class="slider__title title-one">Нежный пломбир <br>с клубничным джемом</h3>
-                <p class="slider__description">Натуральное мороженое из свежих сливок <br>и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи. </p>
-                <a class="slider__button button" href="">Заказать</a>
+                <p class="slider__description">Натуральное мороженое из свежих сливок <br>и молока с вкуснейшим клубничным джемом – это идеальный десерт для всей семьи.</p>
+                <a class="slider__button button" href="#order">Заказать</a>
               </div>
             </article>
             <div class="slider__images">
@@ -180,27 +180,36 @@
             </div>
           </div>
           <footer class="slider__footer">
-            <ol class="slider__dots">
-              <li class="slider__dot slider__dot--active" tabindex="0"></li>
-              <li class="slider__dot" tabindex="0"></li>
-              <li class="slider__dot" tabindex="0"></li>
-            </ol>
+            <div class="slider__dots">
+              <button class="slider__dot slider__dot--active" tabindex="0">
+                <span class="visually-hidden">
+                  Первый слайдер
+                </span>
+              </button>
+              <button class="slider__dot" tabindex="0">
+                <span class="visually-hidden">
+                  Второй слайдер
+                </span>
+              </button>
+              <button class="slider__dot" tabindex="0">
+                <span class="visually-hidden">
+                  Третий слайдер
+                </span>
+              </button>
+            </div>
             <ul class="social">
               <li class="social__item">
-                <a class="social__link" href="https://t.me/htmlacademy">
-                  <i class="social__icon social__icon--telegram"></i>
+                <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
                   <span class="visually-hidden">Телеграмм</span>
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link" href="https://vk.com/htmlacademy">
-                  <i class="social__icon social__icon--vk"></i>
+                <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
                   <span class="visually-hidden">Вконтакте</span>
                 </a>
               </li>
               <li class="social__item">
-                <a class="social__link" href="https://www.youtube.com/user/htmlacademyru">
-                  <i class="social__icon social__icon--youtube"></i>
+                <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
                   <span class="visually-hidden">Youtube</span>
                 </a>
               </li>
@@ -229,7 +238,7 @@
               </div>
               <picture class="gift__media">
                 <source type="image/webp" srcset="img/gifts/gift-marshmallow.webp, img/gifts/gift-marshmallow@2x.webp 2x">
-                <img src="img/gifts/gift-marshmallow.png" srcset="img/gifts/gift-marshmallow@2x.png 2x" width="219" height="268" alt="Малинка">
+                <img src="img/gifts/gift-marshmallow.png" srcset="img/gifts/gift-marshmallow@2x.png 2x" width="219" height="268" alt="Маршмеллоу">
               </picture>
             </article>
           </div>
@@ -254,7 +263,7 @@
               </div>
               <picture class="product__media">
                 <source type="image/webp" srcset="img/product/product-1.webp, img/product/product-1@2x.webp 2x">
-                <img class="product__image" src="img/product/product-1.png" srcset="img/product/product-1@2x.png 2x" width="168" height="168" alt="">
+                <img class="product__image" src="img/product/product-1.png" srcset="img/product/product-1@2x.png 2x" width="168" height="168" alt="Мороженое Малинка">
               </picture>
             </article>
             <article class="product">
@@ -274,7 +283,7 @@
               </div>
               <picture class="product__media">
                 <source type="image/webp" srcset="img/product/product-2.webp, img/product/product-2@2x.webp 2x">
-                <img class="product__image" src="img/product/product-2.png" srcset="img/product/product-2@2x.png 2x" width="168" height="168" alt="">
+                <img class="product__image" src="img/product/product-2.png" srcset="img/product/product-2@2x.png 2x" width="168" height="168" alt="Мороженое Фисташка">
               </picture>
             </article>
             <article class="product">
@@ -294,7 +303,7 @@
               </div>
               <picture class="product__media">
                 <source type="image/webp" srcset="img/product/product-3.webp, img/product/product-3@2x.webp 2x">
-                <img class="product__image" src="img/product/product-3.png" srcset="img/product/product-3@2x.png 2x" width="168" height="168" alt="">
+                <img class="product__image" src="img/product/product-3.png" srcset="img/product/product-3@2x.png 2x" width="168" height="168" alt="Мороженое Черника">
               </picture>
             </article>
             <article class="product">
@@ -314,7 +323,7 @@
               </div>
               <picture class="product__media">
                 <source type="image/webp" srcset="img/product/product-4.webp, img/product/product-4@2x.webp 2x">
-                <img class="product__image" src="img/product/product-4.png" srcset="img/product/product-4@2x.png 2x" width="168" height="168" alt="">
+                <img class="product__image" src="img/product/product-4.png" srcset="img/product/product-4@2x.png 2x" width="168" height="168" alt="Мороженое Бабл-гам">
               </picture>
             </article>
           </div>
@@ -330,9 +339,9 @@
                   и проверенных
                   временем технологий.
                 </p>
-                <span class="advantages__icon-wrapper">
-                  <i class="advantages__icon advantages__icon--icecream"></i>
-                </span>
+                <div class="advantages__icon-wrapper" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="#2d3440" d="M12 0a6.007 6.007 0 0 0-5.9576 5.2941H6v11.9153h12V5.2941h-.0424A6.0066 6.0066 0 0 0 12 0m4.5882 15.7976H7.4118V9.2894a1.264 1.264 0 0 0 1.087.4518c.9106 0 1.5036-.5083 1.5036-1.1506v-.6141a.6068.6068 0 0 1 .8508-.6197.608.608 0 0 1 .3305.368.61.61 0 0 1 .0257.2517v2.3223a1.32 1.32 0 0 0 .4574.9829 1.319 1.319 0 0 0 1.0391.3089 1.313 1.313 0 0 0 1.3587-.7112 1.31 1.31 0 0 0 .1378-.5241v-1.56a.9517.9517 0 0 1 .5658-.9543.953.953 0 0 1 1.2857.5652.955.955 0 0 1 .0473.389.28.28 0 0 0 0 .0636.797.797 0 0 0 .4729.6283V15.84zM10.9412 22.9412a1.0588 1.0588 0 1 0 2.1176 0v-5.0259h-2.1176z"/></svg>
+                </div>
               </li>
               <li class="advantages__item">
                 <p class="advantages__description">
@@ -340,27 +349,27 @@
                   у проверенных фермерских хозяйств, с которыми<br>
                   нас связывает долговременное сотрудничество.
                 </p>
-                <span class="advantages__icon-wrapper">
-                  <i class="advantages__icon advantages__icon--cow"></i>
-                </span>
+                <div class="advantages__icon-wrapper" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><g clip-path="url(#a)"><path fill="#2d3440" d="M20.0618 7.715a9.07 9.07 0 0 0 .9129-3.549 9.04 9.04 0 0 0-.5696-3.6157.754.754 0 0 0-.2526-.3589.795.795 0 0 0-.4151-.165.803.803 0 0 0-.4404.0836.77.77 0 0 0-.32.3044c-.9912 1.7138-3.1217 4.477-4.6826 4.6054h-.0702a13 13 0 0 0-2.1774-.2265 13.06 13.06 0 0 0-2.1852.2265H9.807C8.2462 4.899 6.0844 2.1358 5.0855.422A.766.766 0 0 0 4.767.0965a.802.802 0 0 0-.881.0779.753.753 0 0 0-.2521.3758 9 9 0 0 0-.5912 3.6082 9.03 9.03 0 0 0 .8955 3.549C2.5803 7.8736.8556 8.2964.2312 9.361A1.61 1.61 0 0 0 0 10.1914c0 .2917.0798.5782.2312.8305.1788.3084.4449.5611.767.7283a1.974 1.974 0 0 0 1.0514.2154 5.68 5.68 0 0 0 1.8886-.3624 6.34 6.34 0 0 0 .1015 1.2155 25.8 25.8 0 0 0 1.3657 3.9259c.1483.3549.3122.755.398.9966a10.96 10.96 0 0 0-.6009 1.8724c-.037.4521.0213.9067.1716 1.3364.1503.4296.3893.8251.7025 1.1625C7.2082 23.3658 9.1983 24 12.0234 24s4.823-.6342 5.9468-1.8875a3.29 3.29 0 0 0 .7052-1.1617 3.21 3.21 0 0 0 .1689-1.3372 10.93 10.93 0 0 0-.5931-1.8724c.0858-.2416.2497-.6342.3902-.9966a24.46 24.46 0 0 0 1.3657-3.9259 5.84 5.84 0 0 0 .1093-1.2155 5.67 5.67 0 0 0 1.8262.3624 1.99 1.99 0 0 0 1.0545-.2158c.3233-.167.5909-.4195.7717-.7279A1.613 1.613 0 0 0 24 10.1914c0-.2917-.0798-.5782-.2312-.8305-.6166-1.0268-2.3413-1.4797-3.707-1.6458m-.7414-5.013c.2814 1.5788.0066 3.2033-.7805 4.613a8.3 8.3 0 0 0-.6243-.657 5.62 5.62 0 0 0-1.4906-.9512c1.1256-.8447 2.1033-1.8593 2.8954-3.0048m-14.6017 0c.7842 1.1535 1.7598 2.1738 2.8875 3.02a5.11 5.11 0 0 0-1.475.9512 8 8 0 0 0-.6321.6568c-.7894-1.4143-1.0643-3.0443-.7804-4.628M1.6438 10.297c-.0702-.1208-.0468-.1585 0-.1887.1795-.2945 1.0848-.755 2.8173-.9287a9.6 9.6 0 0 0-.2341.6644c-1.0146.5058-2.3725.8229-2.5832.453m16.8259 2.2649a25 25 0 0 1-1.2643 3.6315 14.7 14.7 0 0 0-.5385 1.4118l-.0468.2341.0858.2114c.2469.5756.4478 1.1688.601 1.7742a1.75 1.75 0 0 1-.1194.6983 1.8 1.8 0 0 1-.3879.6002c-.5619.6267-1.8418 1.3665-4.7684 1.3665s-4.2065-.7549-4.7684-1.3665c-.337-.3527-.5188-.8184-.5072-1.2985a12.1 12.1 0 0 1 .6087-1.7742l.0858-.2114-.0546-.2341a12 12 0 0 0-.5307-1.4194 24.3 24.3 0 0 1-1.2799-3.6541 5.25 5.25 0 0 1 .2124-2.599c.2883-.8368.7834-1.5929 1.4421-2.2026 1.1785-1.1476 3.8475-1.4043 4.7762-1.4119s3.5431.2567 4.7918 1.427c.6628.604 1.1613 1.3567 1.4512 2.1917s.3625 1.7263.2111 2.5948zm3.9021-2.2649c-.2029.3624-1.5608.0528-2.5286-.4454-.0624-.2265-.1404-.4455-.2263-.672 1.7169.1737 2.6144.6342 2.7861.9287.039.0302.0547.0679-.0156.1887z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h24v24H0z"/></clipPath></defs></svg>
+                </div>
               </li>
               <li class="advantages__item">
                 <p class="advantages__description">
                   Для приготовления мороженого используются сливки и молоко высочайшего качества. Все ингредиенты<br>
                   и добавки произведены из натурального сырья.
                 </p>
-                <span class="advantages__icon-wrapper">
-                  <i class="advantages__icon advantages__icon--leaf"></i>
-                </span>
+                <div class="advantages__icon-wrapper" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="#2d3440" d="M18.9932 13.8638C18.6882 7.0573 12.7571.4658 12.4927.1791h-.0339L12.3775.086l-.0882-.0573h-.3795L11.781 0h-.0339l-.122.086-.0746.0645h-.0339c-.2644.3152-6.1955 6.914-6.514 13.7133a1.1 1.1 0 0 0 0 .1505v.7809c.2575 7.3797 6.7784 9.1852 6.8326 9.1995h.1695a.69.69 0 0 0 .1694 0c.061 0 6.5751-1.8556 6.8259-9.1995v-.7809c0-.0502-.0068-.1004-.0068-.1505M6.792 11.349c1.354 1.23 2.8848 2.2241 4.5348 2.9447v3.2599c-1.6607-.8669-4.2162-2.4073-4.9686-3.7615.061-.8268.1996-1.6452.4135-2.4431zm1.3557-3.654c.8866.9788 1.9744 1.729 3.1791 2.1923v2.823c-1.5145-.6757-2.8945-1.6481-4.067-2.866.2578-.7333.5543-1.451.888-2.1494m8.6154 2.1494c-1.1721 1.2185-2.5521 2.191-4.067 2.8659v-2.823c1.195-.4672 2.2731-1.2172 3.1519-2.1924.342.6885.6475 1.3965.9151 2.1208zm-4.067-1.476V2.6366a32.4 32.4 0 0 1 2.4741 3.7114c-.6538.8785-1.5105 1.5645-2.4877 1.9918zm0 9.1996v-3.2743c1.6563-.7142 3.194-1.7035 4.5551-2.9304.2076.801.3393 1.6218.3931 2.4503-.7456 1.3327-3.3011 2.8659-4.9618 3.7257zm-1.3557-9.1996c-.9817-.4327-1.8393-1.1292-2.4877-2.0204a32.45 32.45 0 0 1 2.4741-3.7472zm-4.8398 7.6878c1.4825 1.2313 3.1036 2.2637 4.8262 3.0737v3.1525c-1.2323-.5293-2.3197-1.3764-3.1627-2.4639s-1.415-2.3811-1.6635-3.7623m6.1819 6.2333v-3.1668c1.7241-.8041 3.3456-1.8344 4.8262-3.0665-.238 1.3865-.8059 2.6861-1.6502 3.7766s-1.9373 1.9359-3.176 2.4567"/></svg>
+                </div>
               </li>
               <li class="advantages__item">
                 <p class="advantages__description">
                   Доставка нашего мороженого осуществляется в специальном термопаке, который не даёт мороженому
                   растаять и позволяет сохранить превосходный вкус.
                 </p>
-                <span class="advantages__icon-wrapper">
-                  <i class="advantages__icon advantages__icon--thermometer"></i>
-                </span>
+                <div class="advantages__icon-wrapper" aria-hidden="true">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24"><path fill="#2d3440" d="M14.3917 3.8021c0-1.0084-.3688-1.9755-1.0252-2.6885S11.8199 0 10.8917 0 9.0732.4006 8.4168 1.1136 7.3917 2.7937 7.3917 3.8021v11.0661C6.4944 15.863 5.9944 17.202 6 18.5948c-.0024.8919.199 1.7706.5862 2.5571s.948 1.4565 1.6323 1.9496c.6842.4931 1.4703.7941 2.288.8758.8176.0818 1.6411-.0582 2.3967-.4073.7556-.3492 1.4196-.8966 1.9324-1.5931.5129-.6966.8586-1.5206 1.0061-2.398a5.835 5.835 0 0 0-.1608-2.6295c-.2531-.8485-.6961-1.6156-1.2892-2.2323zm.1252 14.7927c.0071.6596-.1412 1.3102-.4308 1.89-.2895.5798-.7106 1.0697-1.2234 1.423s-1.1002.5583-1.7065.5957-1.2112-.0943-1.7575-.3823c-.5462-.2881-1.0156-.7231-1.3636-1.2636s-.5631-1.1688-.6247-1.8251c-.0617-.6562.032-1.3187.2724-1.9245.2403-.6057.6191-1.1348 1.1005-1.5368V3.8021c0-.6074.2222-1.19.6176-1.6195s.9316-.6708 1.4908-.6708 1.0954.2413 1.4908.6708S13 3.1946 13 3.802v11.6255c.4696.3555.8529.8293 1.1171 1.3809s.4014 1.1645.3998 1.7863"/><path fill="#2d3440" d="M11.6501 16.2288V3.855c0-.2005-.0733-.3927-.2038-.5345s-.3075-.2214-.492-.2214-.3615.0797-.492.2214-.2038.334-.2038.5345v12.3738c-.4643.1783-.8556.5292-1.1047.9906-.2492.4614-.3402 1.0036-.2569 1.5309s.3354 1.0055.712 1.3503c.3764.3447.853.5339 1.3454.5339s.969-.1892 1.3455-.5339.6286-.8231.7119-1.3503-.0077-1.0695-.2569-1.5309c-.2491-.4614-.6404-.8123-1.1047-.9906M20 2.9555h-4.1749v1.5118H20zM20 5.979h-4.1749v1.5118H20zM20 9.0026h-4.1749v1.5117H20zM20 12.0261h-4.1749v1.5118H20z"/></svg>
+                </div>
               </li>
             </ul>
           </section>
@@ -400,8 +409,8 @@
               <legend class="delivery-form__legend">Укажите адрес и дату доставки, и мы свяжемся с вами, чтобы подтвердить заказ.</legend>
               <div class="delivery-form__wrapper">
                 <div class="delivery-form__date">
-                  <div class="delivery-form__label" >
-                    <label>Дата</label>
+                  <div class="delivery-form__label">
+                    <label for="delivery-date">Дата</label>
                     <div class="tooltip">
                       <button class="tooltip__button" type="button">
                         <span class="visually-hidden">Информация</span>
@@ -409,17 +418,17 @@
                       <span class="tooltip__info">Введите дату в формате день.месяц.год</span>
                     </div>
                   </div>
-                  <input class="input delivery-form__input" type="text" placeholder="01.04.2020" required>
+                  <input class="input delivery-form__input" id="delivery-date" type="text" placeholder="01.04.2020" required>
                 </div>
                 <div class="delivery-form__telephone">
-                  <label class="delivery-form__label">
+                  <label class="delivery-form__label" for="delivery-telephone">
                     <span>Телефон</span>
                   </label>
-                  <input class="input delivery-form__input" type="text" placeholder="+7 800 999-00-00" required>
+                  <input class="input delivery-form__input" id="delivery-telephone" type="tel" placeholder="+7 800 999-00-00" required>
                 </div>
                 <div class="delivery-form__address">
                   <div class="delivery-form__label">
-                    <label>Адрес</label>
+                    <label for="delivery-address">Адрес</label>
                     <div class="tooltip">
                       <button class="tooltip__button" type="button">
                         <span class="visually-hidden">Информация</span>
@@ -427,7 +436,7 @@
                       <span class="tooltip__info">Введите название улицы, дома и квартиры</span>
                     </div>
                   </div>
-                  <input class="input delivery-form__input" type="text" placeholder="ул. Большая Конюшенная, 19/8" required>
+                  <input class="input delivery-form__input" id="delivery-address" type="text" placeholder="ул. Большая Конюшенная, 19/8" required>
                 </div>
               </div>
             </fieldset>
@@ -446,27 +455,24 @@
                 <span class="contacts__time">(с 10 до 20 ежедневно)</span>
               </p>
             </address>
-            <button class="button-other contacts__button">Форма обратной связи</button>
+            <button class="button-other contacts__button" type="button">Форма обратной связи</button>
           </section>
         </section>
       </main>
       <footer class="main-footer" >
         <ul class="social main-footer__social">
           <li class="social__item">
-            <a class="social__link" href="https://t.me/htmlacademy">
-              <i class="social__icon social__icon--telegram"></i>
+            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
               <span class="visually-hidden">Телеграмм</span>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="https://vk.com/htmlacademy">
-              <i class="social__icon social__icon--vk"></i>
+            <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
               <span class="visually-hidden">Вконтакте</span>
             </a>
           </li>
           <li class="social__item">
-            <a class="social__link" href="https://www.youtube.com/user/htmlacademyru">
-              <i class="social__icon social__icon--youtube"></i>
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
               <span class="visually-hidden">Youtube</span>
             </a>
           </li>
@@ -485,9 +491,9 @@
             <a class="footer-menu__link" href="">Экологические стандарты</a>
           </li>
         </ul>
-        <div class="copyright">
+        <div class="copyright main-footer__copyright">
           <a class="copyright__logo-link" href="https://htmlacademy.ru/">
-            <img class="copyright__logo-img" src="img/logo/logo_htmlacademy.svg" alt="" width="93" height="27">
+            <img class="copyright__logo-img" src="img/logo/logo-htmlacademy.svg" width="93" height="27" alt="Логотип обучающего центра - htmlacademy">
           </a>
           <p class="copyright__text">
             Сделано в <a class="copyright__link" href="https://htmlacademy.ru/">.html academy</a> © 2021
@@ -516,6 +522,9 @@
           <button class="button-other modal__button" type="submit">Отправить</button>
         </form>
         <button class="button-close modal__button-close" type="button">
+          <span class="visually-hidden">
+            Закрыть попап
+          </span>
         </button>
       </div>
     </div>

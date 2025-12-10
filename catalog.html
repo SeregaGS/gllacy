@@ -14,37 +14,36 @@
 <div class="container container-main">
   <header class="main-header">
     <div class="container-left">
-      <a class="logo" href="">
+      <a class="logo" href="index.html">
         <img class="logo-img" src="img/logo/logo.svg" width="137" height="56" alt="Gllacy - Магазин мороженного">
       </a>
       <nav class="menu">
         <ul class="menu-list">
           <li class="menu-list__item">
-            <!-- Чтобы открыть dropdown, нужно добавить класс menu-list__link--active -->
-            <a class="menu-list__link menu-list__link--dropdown" href="">Каталог</a>
+            <a href="" class="menu-list__link menu-list__link--dropdown">Каталог</a>
             <ul class="menu-list dropdown">
               <li class="dropdown__item">
-                <a class="dropdown-link dropdown-link--new" href="">Новинки</a>
+                <a class="dropdown-link dropdown-link--new">Новинки</a>
               </li>
               <li class="dropdown__item">
-                <a class="dropdown-link" href="">Сливочное</a>
+                <a class="dropdown-link" href="#product">Сливочное</a>
               </li>
               <li class="dropdown__item">
-                <a class="dropdown-link" href="">Щербеты</a>
+                <a class="dropdown-link" href="#product">Щербеты</a>
               </li>
               <li class="dropdown__item">
-                <a class="dropdown-link" href="">Фруктовый лед</a>
+                <a class="dropdown-link" href="#product">Фруктовый лед</a>
               </li>
               <li class="dropdown__item">
-                <a class="dropdown-link" href="">Мелорин</a>
+                <a class="dropdown-link" href="#product">Мелорин</a>
               </li>
             </ul>
           </li>
           <li class="menu-list__item">
-            <a class="menu-list__link" href="">Доставка и оплата</a>
+            <a class="menu-list__link" href="#delivery">Доставка и оплата</a>
           </li>
           <li class="menu-list__item">
-            <a class="menu-list__link" href="">О компании</a>
+            <a class="menu-list__link" href="#company">О компании</a>
           </li>
         </ul>
       </nav>
@@ -52,11 +51,8 @@
     <div class="container-right">
       <a class="number-telephone" href="tel:+78005558628">+7 800 555-86-28</a>
       <form class="form-search" action="/" method="POST">
-        <!-- Чтобы открыть dropdown, нужно добавить класс header-button--active -->
         <button class="header-button form-search__button" type="button">
-          <i class="form-search__button-icon">
-            <span class="visually-hidden">Кнопка поиск</span>
-          </i>
+          <span class="visually-hidden">Кнопка поиск</span>
         </button>
         <label class="dropdown">
           <input class="input form-search__input" id="search" type="search" placeholder="Поиск по сайту">
@@ -79,7 +75,7 @@
             </label>
             <input class="input dropdown-login__input" id="password-login" type="password" name="password-login" autocomplete="off" required>
             <div class="dropdown-login__buttons">
-              <a class="button-other dropdown-login__button" href="">Войти</a>
+              <button class="button-other dropdown-login__button" type="submit">Войти</button>
               <div class="dropdown-login__forgot">
                 <a class="dropdown-login__link" href="">Забыли пароль?</a>
                 <a class="dropdown-login__link" href="">Регистрация</a>
@@ -89,7 +85,6 @@
         </div>
       </div>
       <div class="container-cart">
-        <!-- Чтобы показать dropdown для карты добавить header-button--active -->
         <a class="header-button button-cart" href="#cart">
           <span class="visually-hidden">В корзине - </span>
           2 товара
@@ -104,12 +99,16 @@
               </div>
               <picture class="dropdown-cart__media">
                 <source type="image/webp" srcset="img/product/product-1.webp, img/product/product-1@2x.webp 2x">
-                <img class="dropdown-cart__image" src="img/product/product-1.png" srcset="img/product/product-1@2x.png 2x" width="46" height="46" alt="">
+                <img class="dropdown-cart__image" src="img/product/product-1.png" srcset="img/product/product-1@2x.png 2x" width="46" height="46" alt="Мороженое - Малинка">
               </picture>
               <p class="title-five dropdown-cart__total">310
                 <span class="dropdown-cart__currency">₽</span>
               </p>
-              <button class="button-close dropdown-cart__delete" type="button"></button>
+              <button class="button-close dropdown-cart__delete" type="button">
+                    <span class="visually-hidden">
+                      Удалить товар
+                    </span>
+              </button>
             </li>
             <li class="dropdown-cart__item">
               <div class="dropdown-cart__info">
@@ -118,7 +117,7 @@
               </div>
               <picture class="dropdown-cart__media">
                 <source type="image/webp" srcset="img/product/product-4.webp, img/product/product-4@2x.webp 2x">
-                <img class="dropdown-cart__image" src="img/product/product-4.png" srcset="img/product/product-4@2x.png 2x" width="46" height="46" alt="">
+                <img class="dropdown-cart__image" src="img/product/product-4.png" srcset="img/product/product-4@2x.png 2x" width="46" height="46" alt="Мороженое Бабл-гам">
               </picture>
               <p class="title-five dropdown-cart__total">480
                 <span class="dropdown-cart__currency">₽</span>
@@ -144,7 +143,7 @@
         <h2 class="catalog__title title-two">Сливочное мороженое</h2>
         <ul class="breadcrumbs">
           <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="">Главная</a>
+            <a class="breadcrumbs__link" href="index.html">Главная</a>
           </li>
           <li  class="breadcrumbs__item">
             <a class="breadcrumbs__link" href="">Каталог</a>
@@ -156,8 +155,8 @@
       </header>
       <form class="filter" action="/" method="GET">
         <fieldset class="filter__container">
-          <legend class="visually-hidden">Сортировка:</legend>
-          <label for="sort_by" class="filter__title" aria-hidden="true">Сортировка:</label>
+          <legend class="visually-hidden" aria-hidden="true">Сортировка:</legend>
+          <label for="sort_by" class="filter__title">Сортировка:</label>
           <select class="filter__container-input select" name="sort-by" id="sort_by">
             <option value="popularity" selected>по популярности</option>
             <option value="price">по цене</option>
@@ -266,7 +265,7 @@
           </div>
           <picture class="product__media">
             <source type="image/webp" srcset="img/product/product-1.webp, img/product/product-1@2x.webp 2x">
-            <img class="product__image" src="img/product/product-1.png" srcset="img/product/product-1@2x.png 2x" width="168" height="168" alt="">
+            <img class="product__image" src="img/product/product-1.png" srcset="img/product/product-1@2x.png 2x" width="168" height="168" alt="Мороженое Малинка">
           </picture>
         </article>
         <article class="product">
@@ -286,7 +285,7 @@
           </div>
           <picture class="product__media">
             <source type="image/webp" srcset="img/product/product-2.webp, img/product/product-2@2x.webp 2x">
-            <img class="product__image" src="img/product/product-2.png" srcset="img/product/product-2@2x.png 2x" width="168" height="168" alt="">
+            <img class="product__image" src="img/product/product-2.png" srcset="img/product/product-2@2x.png 2x" width="168" height="168" alt="Мороженое Фисташка">
           </picture>
         </article>
         <article class="product">
@@ -306,7 +305,7 @@
           </div>
           <picture class="product__media">
             <source type="image/webp" srcset="img/product/product-3.webp, img/product/product-3@2x.webp 2x">
-            <img class="product__image" src="img/product/product-3.png" srcset="img/product/product-3@2x.png 2x" width="168" height="168" alt="">
+            <img class="product__image" src="img/product/product-3.png" srcset="img/product/product-3@2x.png 2x" width="168" height="168" alt="Мороженое Черника">
           </picture>
         </article>
         <article class="product">
@@ -326,7 +325,7 @@
           </div>
           <picture class="product__media">
             <source type="image/webp" srcset="img/product/product-4.webp, img/product/product-4@2x.webp 2x">
-            <img class="product__image" src="img/product/product-4.png" srcset="img/product/product-4@2x.png 2x" width="168" height="168" alt="">
+            <img class="product__image" src="img/product/product-4.png" srcset="img/product/product-4@2x.png 2x" width="168" height="168" alt="Мороженое Бабл-гам">
           </picture>
         </article>
         <article class="product">
@@ -346,7 +345,7 @@
           </div>
           <picture class="product__media">
             <source type="image/webp" srcset="img/product/product-5.webp, img/product/product-5@2x.webp 2x">
-            <img class="product__image" src="img/product/product-5.png" srcset="img/product/product-5@2x.png 2x" width="168" height="168" alt="">
+            <img class="product__image" src="img/product/product-5.png" srcset="img/product/product-5@2x.png 2x" width="168" height="168" alt="Мороженое Ежевика">
           </picture>
         </article>
         <article class="product">
@@ -366,7 +365,7 @@
           </div>
           <picture class="product__media">
             <source type="image/webp" srcset="img/product/product-6.webp, img/product/product-6@2x.webp 2x">
-            <img class="product__image" src="img/product/product-6.png" srcset="img/product/product-6@2x.png 2x" width="168" height="168" alt="">
+            <img class="product__image" src="img/product/product-6.png" srcset="img/product/product-6@2x.png 2x" width="168" height="168" alt="Мороженое Банан">
           </picture>
         </article>
         <article class="product">
@@ -386,7 +385,7 @@
           </div>
           <picture class="product__media">
             <source type="image/webp" srcset="img/product/product-7.webp, img/product/product-7@2x.webp 2x">
-            <img class="product__image" src="img/product/product-7.png" srcset="img/product/product-7@2x.png 2x" width="168" height="168" alt="">
+            <img class="product__image" src="img/product/product-7.png" srcset="img/product/product-7@2x.png 2x" width="168" height="168" alt="Мороженое Шоколадка">
           </picture>
         </article>
         <article class="product">
@@ -406,7 +405,7 @@
           </div>
           <picture class="product__media">
             <source type="image/webp" srcset="img/product/product-8.webp, img/product/product-8@2x.webp 2x">
-            <img class="product__image" src="img/product/product-8.png" srcset="img/product/product-8@2x.png 2x" width="168" height="168" alt="">
+            <img class="product__image" src="img/product/product-8.png" srcset="img/product/product-8@2x.png 2x" width="168" height="168" alt="Мороженое Клубничка">
           </picture>
         </article>
         <article class="product">
@@ -426,7 +425,7 @@
           </div>
           <picture class="product__media">
             <source type="image/webp" srcset="img/product/product-9.webp, img/product/product-9@2x.webp 2x">
-            <img class="product__image" src="img/product/product-9.png" srcset="img/product/product-9@2x.png 2x" width="168" height="168" alt="">
+            <img class="product__image" src="img/product/product-9.png" srcset="img/product/product-9@2x.png 2x" width="168" height="168" alt="Мороженое Лимон">
           </picture>
         </article>
         <article class="product">
@@ -446,7 +445,7 @@
           </div>
           <picture class="product__media">
             <source type="image/webp" srcset="img/product/product-10.webp, img/product/product-10@2x.webp 2x">
-            <img class="product__image" src="img/product/product-10.png" srcset="img/product/product-10@2x.png 2x" width="168" height="168" alt="">
+            <img class="product__image" src="img/product/product-10.png" srcset="img/product/product-10@2x.png 2x" width="168" height="168" alt="Мороженое Ментол">
           </picture>
         </article>
         <article class="product">
@@ -466,7 +465,7 @@
           </div>
           <picture class="product__media">
             <source type="image/webp" srcset="img/product/product-11.webp, img/product/product-11@2x.webp 2x">
-            <img class="product__image" src="img/product/product-11.png" srcset="img/product/product-11@2x.png 2x" width="168" height="168" alt="">
+            <img class="product__image" src="img/product/product-11.png" srcset="img/product/product-11@2x.png 2x" width="168" height="168" alt="Мороженое Орешек">
           </picture>
         </article>
         <article class="product">
@@ -486,7 +485,7 @@
           </div>
           <picture class="product__media">
             <source type="image/webp" srcset="img/product/product-12.webp, img/product/product-12@2x.webp 2x">
-            <img class="product__image" src="img/product/product-12.png" srcset="img/product/product-12@2x.png 2x" width="168" height="168" alt="">
+            <img class="product__image" src="img/product/product-12.png" srcset="img/product/product-12@2x.png 2x" width="168" height="168" alt="Мороженое Крем-брюле">
           </picture>
         </article>
       </div>
@@ -525,20 +524,17 @@
   <footer class="main-footer" >
     <ul class="social main-footer__social">
       <li class="social__item">
-        <a class="social__link" href="https://t.me/htmlacademy">
-          <i class="social__icon social__icon--telegram"></i>
+        <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
           <span class="visually-hidden">Телеграмм</span>
         </a>
       </li>
       <li class="social__item">
-        <a class="social__link" href="https://vk.com/htmlacademy">
-          <i class="social__icon social__icon--vk"></i>
+        <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
           <span class="visually-hidden">Вконтакте</span>
         </a>
       </li>
       <li class="social__item">
-        <a class="social__link" href="https://www.youtube.com/user/htmlacademyru">
-          <i class="social__icon social__icon--youtube"></i>
+        <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
           <span class="visually-hidden">Youtube</span>
         </a>
       </li>
@@ -557,9 +553,9 @@
         <a class="footer-menu__link" href="">Экологические стандарты</a>
       </li>
     </ul>
-    <div class="copyright">
+    <div class="copyright main-footer__copyright">
       <a class="copyright__logo-link" href="https://htmlacademy.ru/">
-        <img class="copyright__logo-img" src="img/logo/logo_htmlacademy.svg" alt="" width="93" height="27">
+        <img class="copyright__logo-img" src="img/logo/logo-htmlacademy.svg" width="93" height="27" alt="Логотип обучающего центра - htmlacademy">
       </a>
       <p class="copyright__text">
         Сделано в <a class="copyright__link" href="https://htmlacademy.ru/">.html academy</a> © 2021
