@@ -82,6 +82,7 @@ input[type="number"] {
   line-height: 20px;
   color: var(--basic-color-extradark);
   background-color: var(--additional-color-light);
+  transition: background-color 0.2s ease;
 }
 .visually-hidden {
   position: absolute;
@@ -94,6 +95,16 @@ input[type="number"] {
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.slider-active--1 {
+  background-color: var(--additional-color-light);
+}
+.slider-active--2 {
+  background-color: var(--additional-color-blue);
+}
+.slider-active--3 {
+  background-color: var(--additional-color-yellow);
 }
 
 .title-one {
@@ -724,11 +735,14 @@ input[type="number"] {
   column-gap: 2px;
 }
 .slider__item {
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   padding-left: 70px;
   margin-top: 24px;
+}
+.slider__item--active {
+  display: flex;
 }
 .slider__content {
   padding-right: 20px;
@@ -775,11 +789,11 @@ input[type="number"] {
   transform: translateY(-50%);
 }
 .slider__images-item--active {
-  width: auto;
+  width: 328px;
   height: 507px;
   opacity: 1;
-  order: -1;
   margin-right: 16px;
+  order: -3;
 }
 .slider__images-item--active::before {
   width: 327px;
@@ -795,12 +809,16 @@ input[type="number"] {
   justify-content: center;
   margin-top: 5px;
   margin-left: 4px;
+  opacity: 0.4;
+  transition: opacity 0.05s ease;
+}
+.slider__images-item--active .slider__picture {
+  opacity: 1;
 }
 .slider__images-item--active .slider__picture {
   margin-top: 0;
   margin-left: -2px;
 }
-
 .controls {
   display: flex;
   justify-content: space-between;
@@ -893,6 +911,7 @@ input[type="number"] {
   border: none;
   background-color: var(--basic-color-extralighter);
   cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.2s ease;
 }
 .slider__dot--active {
   background-color: var(--basic-color-white);
@@ -903,11 +922,12 @@ input[type="number"] {
 }
 .slider__dot:active {
   background-color: var(--basic-color-lighter);
+  outline-color: transparent;
 }
-.slider__dot:focus {
+.slider__dot:not(:active):focus {
   outline: 1px solid var(--basic-color-extradark);
   outline-offset: -1px;
-  }
+}
 .slider .social {
   margin: 1px 0 0 0;
 }
