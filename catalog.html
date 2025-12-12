@@ -9,583 +9,559 @@
   <link rel="apple-touch-icon" href="img/favicon/152.png">
   <link rel="stylesheet" href="./style/style.css">
 </head>
-<!-- в body добавить класс body-overlay добавить для отображения modal в overlay  -->
-<body class="main-body">
-<div class="container container-main">
-  <header class="main-header">
-    <div class="container-left">
-      <a class="logo" href="index.html">
-        <img class="logo-img" src="img/logo/logo.svg" width="137" height="56" alt="Gllacy - Магазин мороженного">
-      </a>
-      <nav class="menu">
-        <ul class="menu-list">
-          <li class="menu-list__item">
-            <a href="" class="menu-list__link menu-list__link--dropdown">Каталог</a>
-            <ul class="menu-list dropdown">
-              <li class="dropdown__item">
-                <a class="dropdown-link dropdown-link--new">Новинки</a>
+  <body class="main-body">
+    <div class="container container-main">
+      <header class="main-header">
+        <div class="container-left">
+          <a class="logo" href="index.html">
+            <img class="logo-img" src="img/logo/logo.svg" width="137" height="56" alt="Gllacy - Магазин мороженного">
+          </a>
+          <nav class="menu">
+            <ul class="menu-list">
+              <li class="menu-list__item">
+                <a href="" class="menu-list__link menu-list__link--dropdown">Каталог</a>
+                <ul class="menu-list dropdown">
+                  <li class="dropdown__item">
+                    <a class="dropdown-link dropdown-link--new">Новинки</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown-link" href="#product">Сливочное</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown-link" href="#product">Щербеты</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown-link" href="#product">Фруктовый лед</a>
+                  </li>
+                  <li class="dropdown__item">
+                    <a class="dropdown-link" href="#product">Мелорин</a>
+                  </li>
+                </ul>
               </li>
-              <li class="dropdown__item">
-                <a class="dropdown-link" href="#product">Сливочное</a>
+              <li class="menu-list__item">
+                <a class="menu-list__link" href="#delivery">Доставка и оплата</a>
               </li>
-              <li class="dropdown__item">
-                <a class="dropdown-link" href="#product">Щербеты</a>
-              </li>
-              <li class="dropdown__item">
-                <a class="dropdown-link" href="#product">Фруктовый лед</a>
-              </li>
-              <li class="dropdown__item">
-                <a class="dropdown-link" href="#product">Мелорин</a>
+              <li class="menu-list__item">
+                <a class="menu-list__link" href="#company">О компании</a>
               </li>
             </ul>
-          </li>
-          <li class="menu-list__item">
-            <a class="menu-list__link" href="#delivery">Доставка и оплата</a>
-          </li>
-          <li class="menu-list__item">
-            <a class="menu-list__link" href="#company">О компании</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
-    <div class="container-right">
-      <a class="number-telephone" href="tel:+78005558628">+7 800 555-86-28</a>
-      <form class="form-search" action="/" method="POST">
-        <button class="header-button form-search__button" type="button">
-          <span class="visually-hidden">Кнопка поиск</span>
-        </button>
-        <label class="dropdown">
-          <input class="input form-search__input" id="search" type="search" placeholder="Поиск по сайту">
-        </label>
-      </form>
-      <div class="container-login">
-        <a class="header-button button-login" href="">
-          <span class="visually-hidden">Вход в личный кабинет</span>
-          Вход
-        </a>
-        <div class="dropdown dropdown-login">
-          <p class="title-three dropdown-login__title">Личный кабинет</p>
-          <form class="dropdown-login__form" action="/" method="POST">
-            <label class="visually-hidden" for="email-login">
-              Введите email
+          </nav>
+        </div>
+        <div class="container-right">
+          <a class="number-telephone" href="tel:+78005558628">+7 800 555-86-28</a>
+          <form class="form-search" action="/" method="POST">
+            <button class="header-button form-search__button" type="button">
+              <span class="visually-hidden">Кнопка поиск</span>
+            </button>
+            <label class="dropdown">
+              <input class="input form-search__input" id="search" type="search" placeholder="Поиск по сайту">
             </label>
-            <input class="input dropdown-login__input" id="email-login" type="email" name="email-login" placeholder="email@example.com" required>
-            <label class="visually-hidden" for="password-login">
-              Введите ваш пароль
-            </label>
-            <input class="input dropdown-login__input" id="password-login" type="password" name="password-login" autocomplete="off" required>
-            <div class="dropdown-login__buttons">
-              <button class="button-other dropdown-login__button" type="submit">Войти</button>
-              <div class="dropdown-login__forgot">
-                <a class="dropdown-login__link" href="">Забыли пароль?</a>
-                <a class="dropdown-login__link" href="">Регистрация</a>
-              </div>
-            </div>
           </form>
-        </div>
-      </div>
-      <div class="container-cart">
-        <a class="header-button button-cart" href="#cart">
-          <span class="visually-hidden">В корзине - </span>
-          2 товара
-        </a>
-        <div class="dropdown dropdown-cart">
-          <p class="dropdown__title title-three">Корзина</p>
-          <ul class="dropdown-cart__list">
-            <li class="dropdown-cart__item">
-              <div class="dropdown-cart__info">
-                <p class="title-five dropdown-cart__title">Малинка</p>
-                <p class="dropdown-cart__calculate">1 кг х 310 ₽</p>
-              </div>
-              <picture class="dropdown-cart__media">
-                <source type="image/webp" srcset="img/product/product-1.webp, img/product/product-1@2x.webp 2x">
-                <img class="dropdown-cart__image" src="img/product/product-1.png" srcset="img/product/product-1@2x.png 2x" width="46" height="46" alt="Мороженое - Малинка">
-              </picture>
-              <p class="title-five dropdown-cart__total">310
-                <span class="dropdown-cart__currency">₽</span>
-              </p>
-              <button class="button-close dropdown-cart__delete" type="button">
-                    <span class="visually-hidden">
-                      Удалить товар
-                    </span>
-              </button>
-            </li>
-            <li class="dropdown-cart__item">
-              <div class="dropdown-cart__info">
-                <p class="title-five dropdown-cart__title">Бабл-гам</p>
-                <p class="dropdown-cart__calculate">1,5 кг х 320 ₽</p>
-              </div>
-              <picture class="dropdown-cart__media">
-                <source type="image/webp" srcset="img/product/product-4.webp, img/product/product-4@2x.webp 2x">
-                <img class="dropdown-cart__image" src="img/product/product-4.png" srcset="img/product/product-4@2x.png 2x" width="46" height="46" alt="Мороженое Бабл-гам">
-              </picture>
-              <p class="title-five dropdown-cart__total">480
-                <span class="dropdown-cart__currency">₽</span>
-              </p>
-              <button class="button-close dropdown-cart__delete" type="button"></button>
-            </li>
-          </ul>
-          <div class="dropdown-cart__total-price">
-            <a class="button-other dropdown-cart__button" href="#order">Оформить заказ</a>
-            <p class="dropdown-cart__total title-five">
-              <span>Итого:</span>
-              <span>790 <span class="dropdown-cart__currency">₽</span></span>
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </header>
-  <main class="main">
-    <h1 class="visually-hidden">Каталог сливочного мороженного</h1>
-    <section class="catalog">
-      <header class="catalog__header">
-        <h2 class="catalog__title title-two">Сливочное мороженое</h2>
-        <ul class="breadcrumbs">
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="index.html">Главная</a>
-          </li>
-          <li  class="breadcrumbs__item">
-            <a class="breadcrumbs__link" href="">Каталог</a>
-          </li>
-          <li class="breadcrumbs__item">
-            <a class="breadcrumbs__link breadcrumbs__link--active">Сливочное мороженое</a>
-          </li>
-        </ul>
-      </header>
-      <form class="filter" action="/" method="GET">
-        <fieldset class="filter__container">
-          <legend class="visually-hidden" aria-hidden="true">Сортировка:</legend>
-          <label for="sort_by" class="filter__title">Сортировка:</label>
-          <select class="filter__container-input select" name="sort-by" id="sort_by">
-            <option value="popularity" selected>по популярности</option>
-            <option value="price">по цене</option>
-          </select>
-        </fieldset>
-        <fieldset class="filter__container toggle-price">
-          <legend class="visually-hidden">Цена:</legend>
-          <div class="toggle-price__minmax">
-            <span class="filter__title" aria-hidden="true">Цена:</span>
-            <label class="toggle-price__min">
-              <span class="visually-hidden">от</span>
-              <input class="toggle-price__min-input" type="number" name="min-price-range" value="100" min="100" max="500">
-            </label>
-            <label class="toggle-price__max">
-              <span class="visually-hidden">до</span>
-              <input class="toggle-price__max-input" type="number" name="max-price-range" value="500" min="100" max="500">
-            </label>
-          </div>
-          <div class="filter__container-input">
-            <div class="toggle-range">
-              <div class="toggle-range__slider">
-                <div class="toggle-range__visual-total"></div>
-              </div>
-              <button class="toggle-range__button toggle-range__button--min" type="button">
-                <span class="visually-hidden">Изменить минимальную цену</span>
-              </button>
-              <button class="toggle-range__button toggle-range__button--max" type="button">
-                <span class="visually-hidden">Изменить максимальную цену</span>
-              </button>
+          <div class="container-login">
+            <a class="header-button button-login" href="">
+              <span class="visually-hidden">Вход в личный кабинет</span>
+              Вход
+            </a>
+            <div class="dropdown dropdown-login">
+              <p class="title-three dropdown-login__title">Личный кабинет</p>
+              <form class="dropdown-login__form" action="/" method="POST">
+                <label class="visually-hidden" for="email-login">
+                  Введите email
+                </label>
+                <input class="input dropdown-login__input" id="email-login" type="email" name="email-login" placeholder="email@example.com" required>
+                <label class="visually-hidden" for="password-login">
+                  Введите ваш пароль
+                </label>
+                <input class="input dropdown-login__input" id="password-login" type="password" name="password-login" autocomplete="off" required>
+                <div class="dropdown-login__buttons">
+                  <button class="button-other dropdown-login__button" type="submit">Войти</button>
+                  <div class="dropdown-login__forgot">
+                    <a class="dropdown-login__link" href="">Забыли пароль?</a>
+                    <a class="dropdown-login__link" href="">Регистрация</a>
+                  </div>
+                </div>
+              </form>
             </div>
           </div>
-        </fieldset>
-        <fieldset class="filter__container">
-          <legend class="filter__title">Жирность:</legend>
-          <div class="filter__container-input radio">
-            <label class="radio__container">
-              <input class="visually-hidden" type="radio" name="fat-content" value="0">
-              <span class="radio__input"></span>
-              <span class="radio__value">0%</span>
-            </label>
-            <label class="radio__container">
-              <input class="visually-hidden" type="radio" name="fat-content" value="10" checked>
-              <span class="radio__input"></span>
-              <span class="radio__value">до 10% </span>
-            </label>
-            <label class="radio__container">
-              <input class="visually-hidden" type="radio" name="fat-content" value="30">
-              <span class="radio__input"></span>
-              <span class="radio__value">до 30% </span>
-            </label>
-            <label class="radio__container">
-              <input class="visually-hidden" type="radio" name="fat-content" value="30+">
-              <span class="radio__input"></span>
-              <span class="radio__value">выше 30%</span>
-            </label>
-          </div>
-        </fieldset>
-        <fieldset class="filter__container">
-          <legend class="filter__title">Наполнители:</legend>
-          <div class="filter__container-input checkbox">
-            <label class="checkbox__container">
-              <input class="visually-hidden" type="checkbox" name="fillers" value="chocolate" checked>
-              <span class="checkbox__input"></span>
-              <span class="checkbox__value">шоколадные</span>
-            </label>
-            <label class="checkbox__container">
-              <input class="visually-hidden" type="checkbox" name="fillers" value="sugar-sprinkles" checked>
-                <span class="checkbox__input"></span>
-              <span class="checkbox__value">сахарные посыпки</span>
-            </label>
-            <label class="checkbox__container">
-              <input class="visually-hidden" type="checkbox" name="fillers" value="fruits">
-              <span class="checkbox__input"></span>
-              <span class="checkbox__value">фрукты</span>
-            </label>
-            <label class="checkbox__container">
-              <input class="visually-hidden" type="checkbox" name="fillers" value="syrups">
-              <span class="checkbox__input"></span>
-              <span class="checkbox__value">сиропы</span>
-            </label>
-            <label class="checkbox__container">
-              <input class="visually-hidden" type="checkbox" name="fillers" value="jams">
-              <span class="checkbox__input"></span>
-              <span class="checkbox__value">джемы</span>
-            </label>
-          </div>
-        </fieldset>
-        <button class="button filter__button" type="submit"
-        >Применить</button>
-      </form>
-      <div class="catalog__products">
-        <article class="product">
-          <div class="product__content">
-            <h3 class="product__title title-four">Малинка</h3>
-            <p class="product__description">Сливочное мороженое с малиновым джемом</p>
-          </div>
-          <div class="product__price">
-            <p class="title-four">310
-              <span class="product__currency">₽</span>
-              /
-              <span class="product__weight">кг</span>
-            </p>
-            <a class="product__button product__button--cart" href="">
-              <span class="visually-hidden">Положить в корзину</span>
+          <div class="container-cart">
+            <a class="header-button button-cart" href="#cart">
+              <span class="visually-hidden">В корзине - </span>
+              2 товара
             </a>
+            <div class="dropdown dropdown-cart">
+              <p class="dropdown__title title-three">Корзина</p>
+              <ul class="dropdown-cart__list">
+                <li class="dropdown-cart__item">
+                  <div class="dropdown-cart__info">
+                    <p class="title-five dropdown-cart__title">Малинка</p>
+                    <p class="dropdown-cart__calculate">1 кг х 310 ₽</p>
+                  </div>
+                  <picture class="dropdown-cart__media">
+                    <source type="image/webp" srcset="img/product/product-1.webp, img/product/product-1@2x.webp 2x">
+                    <img class="dropdown-cart__image" src="img/product/product-1.png" srcset="img/product/product-1@2x.png 2x" width="46" height="46" alt="Мороженое - Малинка">
+                  </picture>
+                  <p class="title-five dropdown-cart__total">310
+                    <span class="dropdown-cart__currency">₽</span>
+                  </p>
+                  <button class="button-close dropdown-cart__delete" type="button">
+                        <span class="visually-hidden">
+                          Удалить товар
+                        </span>
+                  </button>
+                </li>
+                <li class="dropdown-cart__item">
+                  <div class="dropdown-cart__info">
+                    <p class="title-five dropdown-cart__title">Бабл-гам</p>
+                    <p class="dropdown-cart__calculate">1,5 кг х 320 ₽</p>
+                  </div>
+                  <picture class="dropdown-cart__media">
+                    <source type="image/webp" srcset="img/product/product-4.webp, img/product/product-4@2x.webp 2x">
+                    <img class="dropdown-cart__image" src="img/product/product-4.png" srcset="img/product/product-4@2x.png 2x" width="46" height="46" alt="Мороженое Бабл-гам">
+                  </picture>
+                  <p class="title-five dropdown-cart__total">480
+                    <span class="dropdown-cart__currency">₽</span>
+                  </p>
+                  <button class="button-close dropdown-cart__delete" type="button"></button>
+                </li>
+              </ul>
+              <div class="dropdown-cart__total-price">
+                <a class="button-other dropdown-cart__button" href="#order">Оформить заказ</a>
+                <p class="dropdown-cart__total title-five">
+                  <span>Итого:</span>
+                  <span>790 <span class="dropdown-cart__currency">₽</span></span>
+                </p>
+              </div>
+            </div>
           </div>
-          <picture class="product__media">
-            <source type="image/webp" srcset="img/product/product-1.webp, img/product/product-1@2x.webp 2x">
-            <img class="product__image" src="img/product/product-1.png" srcset="img/product/product-1@2x.png 2x" width="168" height="168" alt="Мороженое Малинка">
-          </picture>
-        </article>
-        <article class="product">
-          <div class="product__content">
-            <h3 class="product__title title-four">Фисташка</h3>
-            <p class="product__description">Фисташковый пломбир с кусочками шоколада</p>
+        </div>
+      </header>
+      <main class="main">
+        <h1 class="visually-hidden">Каталог сливочного мороженного</h1>
+        <section class="catalog">
+          <header class="catalog__header">
+            <h2 class="catalog__title title-two">Сливочное мороженое</h2>
+            <ul class="breadcrumbs">
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="index.html">Главная</a>
+              </li>
+              <li  class="breadcrumbs__item">
+                <a class="breadcrumbs__link" href="">Каталог</a>
+              </li>
+              <li class="breadcrumbs__item">
+                <a class="breadcrumbs__link breadcrumbs__link--active">Сливочное мороженое</a>
+              </li>
+            </ul>
+          </header>
+          <form class="filter" action="/" method="GET">
+            <fieldset class="filter__container">
+              <legend class="visually-hidden" aria-hidden="true">Сортировка:</legend>
+              <label for="sort_by" class="filter__title">Сортировка:</label>
+              <select class="filter__container-input select" name="sort-by" id="sort_by">
+                <option value="popularity" selected>по популярности</option>
+                <option value="price">по цене</option>
+              </select>
+            </fieldset>
+            <fieldset class="filter__container toggle-price">
+              <legend class="visually-hidden">Цена:</legend>
+              <div class="toggle-price__minmax">
+                <span class="filter__title" aria-hidden="true">Цена:</span>
+                <label class="toggle-price__min">
+                  <span class="visually-hidden">от</span>
+                  <input class="toggle-price__min-input" type="number" name="min-price-range" value="100" min="100" max="500">
+                </label>
+                <label class="toggle-price__max">
+                  <span class="visually-hidden">до</span>
+                  <input class="toggle-price__max-input" type="number" name="max-price-range" value="500" min="100" max="500">
+                </label>
+              </div>
+              <div class="filter__container-input">
+                <div class="toggle-range">
+                  <div class="toggle-range__slider">
+                    <div class="toggle-range__visual-total"></div>
+                  </div>
+                  <button class="toggle-range__button toggle-range__button--min" type="button">
+                    <span class="visually-hidden">Изменить минимальную цену</span>
+                  </button>
+                  <button class="toggle-range__button toggle-range__button--max" type="button">
+                    <span class="visually-hidden">Изменить максимальную цену</span>
+                  </button>
+                </div>
+              </div>
+            </fieldset>
+            <fieldset class="filter__container">
+              <legend class="filter__title">Жирность:</legend>
+              <div class="filter__container-input radio">
+                <label class="radio__container">
+                  <input class="visually-hidden" type="radio" name="fat-content" value="0">
+                  <span class="radio__input"></span>
+                  <span class="radio__value">0%</span>
+                </label>
+                <label class="radio__container">
+                  <input class="visually-hidden" type="radio" name="fat-content" value="10" checked>
+                  <span class="radio__input"></span>
+                  <span class="radio__value">до 10% </span>
+                </label>
+                <label class="radio__container">
+                  <input class="visually-hidden" type="radio" name="fat-content" value="30">
+                  <span class="radio__input"></span>
+                  <span class="radio__value">до 30% </span>
+                </label>
+                <label class="radio__container">
+                  <input class="visually-hidden" type="radio" name="fat-content" value="30+">
+                  <span class="radio__input"></span>
+                  <span class="radio__value">выше 30%</span>
+                </label>
+              </div>
+            </fieldset>
+            <fieldset class="filter__container">
+              <legend class="filter__title">Наполнители:</legend>
+              <div class="filter__container-input checkbox">
+                <label class="checkbox__container">
+                  <input class="visually-hidden" type="checkbox" name="fillers" value="chocolate" checked>
+                  <span class="checkbox__input"></span>
+                  <span class="checkbox__value">шоколадные</span>
+                </label>
+                <label class="checkbox__container">
+                  <input class="visually-hidden" type="checkbox" name="fillers" value="sugar-sprinkles" checked>
+                    <span class="checkbox__input"></span>
+                  <span class="checkbox__value">сахарные посыпки</span>
+                </label>
+                <label class="checkbox__container">
+                  <input class="visually-hidden" type="checkbox" name="fillers" value="fruits">
+                  <span class="checkbox__input"></span>
+                  <span class="checkbox__value">фрукты</span>
+                </label>
+                <label class="checkbox__container">
+                  <input class="visually-hidden" type="checkbox" name="fillers" value="syrups">
+                  <span class="checkbox__input"></span>
+                  <span class="checkbox__value">сиропы</span>
+                </label>
+                <label class="checkbox__container">
+                  <input class="visually-hidden" type="checkbox" name="fillers" value="jams">
+                  <span class="checkbox__input"></span>
+                  <span class="checkbox__value">джемы</span>
+                </label>
+              </div>
+            </fieldset>
+            <button class="button filter__button" type="submit"
+            >Применить</button>
+          </form>
+          <div class="catalog__products">
+            <article class="product">
+              <div class="product__content">
+                <h3 class="product__title title-four">Малинка</h3>
+                <p class="product__description">Сливочное мороженое с малиновым джемом</p>
+              </div>
+              <div class="product__price">
+                <p class="title-four">310
+                  <span class="product__currency">₽</span>
+                  /
+                  <span class="product__weight">кг</span>
+                </p>
+                <a class="product__button product__button--cart" href="">
+                  <span class="visually-hidden">Положить в корзину</span>
+                </a>
+              </div>
+              <picture class="product__media">
+                <source type="image/webp" srcset="img/product/product-1.webp, img/product/product-1@2x.webp 2x">
+                <img class="product__image" src="img/product/product-1.png" srcset="img/product/product-1@2x.png 2x" width="168" height="168" alt="Мороженое Малинка">
+              </picture>
+            </article>
+            <article class="product">
+              <div class="product__content">
+                <h3 class="product__title title-four">Фисташка</h3>
+                <p class="product__description">Фисташковый пломбир с кусочками шоколада</p>
+              </div>
+              <div class="product__price">
+                <p class="title-four">340
+                  <span class="product__currency">₽</span>
+                  /
+                  <span class="product__weight">кг</span>
+                </p>
+                <a class="product__button product__button--cart" href="">
+                  <span class="visually-hidden">Положить в корзину</span>
+                </a>
+              </div>
+              <picture class="product__media">
+                <source type="image/webp" srcset="img/product/product-2.webp, img/product/product-2@2x.webp 2x">
+                <img class="product__image" src="img/product/product-2.png" srcset="img/product/product-2@2x.png 2x" width="168" height="168" alt="Мороженое Фисташка">
+              </picture>
+            </article>
+            <article class="product">
+              <div class="product__content">
+                <h3 class="product__title title-four">Черника</h3>
+                <p class="product__description">Крем-брюле <br>с черничным джемом</p>
+              </div>
+              <div class="product__price">
+                <p class="title-four">330
+                  <span class="product__currency">₽</span>
+                  /
+                  <span class="product__weight">кг</span>
+                </p>
+                <a class="product__button product__button--cart" href="">
+                  <span class="visually-hidden">Положить в корзину</span>
+                </a>
+              </div>
+              <picture class="product__media">
+                <source type="image/webp" srcset="img/product/product-3.webp, img/product/product-3@2x.webp 2x">
+                <img class="product__image" src="img/product/product-3.png" srcset="img/product/product-3@2x.png 2x" width="168" height="168" alt="Мороженое Черника">
+              </picture>
+            </article>
+            <article class="product">
+              <div class="product__content">
+                <h3 class="product__title title-four">Бабл-гам</h3>
+                <p class="product__description">Ванильный пломбир <br>со сладкой посыпкой</p>
+              </div>
+              <div class="product__price">
+                <p class="title-four">320
+                  <span class="product__currency">₽</span>
+                  /
+                  <span class="product__weight">кг</span>
+                </p>
+                <a class="product__button product__button--cart" href="">
+                  <span class="visually-hidden">Положить в корзину</span>
+                </a>
+              </div>
+              <picture class="product__media">
+                <source type="image/webp" srcset="img/product/product-4.webp, img/product/product-4@2x.webp 2x">
+                <img class="product__image" src="img/product/product-4.png" srcset="img/product/product-4@2x.png 2x" width="168" height="168" alt="Мороженое Бабл-гам">
+              </picture>
+            </article>
+            <article class="product">
+              <div class="product__content">
+                <h3 class="product__title title-four">Ежевика</h3>
+                <p class="product__description">Сливочное мороженое с ежевичным джемом</p>
+              </div>
+              <div class="product__price">
+                <p class="title-four">330
+                  <span class="product__currency">₽</span>
+                  /
+                  <span class="product__weight">кг</span>
+                </p>
+                <a class="product__button product__button--cart" href="">
+                  <span class="visually-hidden">Положить в корзину</span>
+                </a>
+              </div>
+              <picture class="product__media">
+                <source type="image/webp" srcset="img/product/product-5.webp, img/product/product-5@2x.webp 2x">
+                <img class="product__image" src="img/product/product-5.png" srcset="img/product/product-5@2x.png 2x" width="168" height="168" alt="Мороженое Ежевика">
+              </picture>
+            </article>
+            <article class="product">
+              <div class="product__content">
+                <h3 class="product__title title-four">Банан</h3>
+                <p class="product__description">Сливочный пломбир <br>с банановым вкусом</p>
+              </div>
+              <div class="product__price">
+                <p class="title-four">340
+                  <span class="product__currency">₽</span>
+                  /
+                  <span class="product__weight">кг</span>
+                </p>
+                <a class="product__button product__button--cart" href="">
+                  <span class="visually-hidden">Положить в корзину</span>
+                </a>
+              </div>
+              <picture class="product__media">
+                <source type="image/webp" srcset="img/product/product-6.webp, img/product/product-6@2x.webp 2x">
+                <img class="product__image" src="img/product/product-6.png" srcset="img/product/product-6@2x.png 2x" width="168" height="168" alt="Мороженое Банан">
+              </picture>
+            </article>
+            <article class="product">
+              <div class="product__content">
+                <h3 class="product__title title-four">Шоколадка</h3>
+                <p class="product__description">Классический шоколадный пломбир</p>
+              </div>
+              <div class="product__price">
+                <p class="title-four">270
+                  <span class="product__currency">₽</span>
+                  /
+                  <span class="product__weight">кг</span>
+                </p>
+                <a class="product__button product__button--cart" href="">
+                  <span class="visually-hidden">Положить в корзину</span>
+                </a>
+              </div>
+              <picture class="product__media">
+                <source type="image/webp" srcset="img/product/product-7.webp, img/product/product-7@2x.webp 2x">
+                <img class="product__image" src="img/product/product-7.png" srcset="img/product/product-7@2x.png 2x" width="168" height="168" alt="Мороженое Шоколадка">
+              </picture>
+            </article>
+            <article class="product">
+              <div class="product__content">
+                <h3 class="product__title title-four">Клубничка</h3>
+                <p class="product__description">Сливочный пломбир <br>с клубничным вкусом</p>
+              </div>
+              <div class="product__price">
+                <p class="title-four">300
+                  <span class="product__currency">₽</span>
+                  /
+                  <span class="product__weight">кг</span>
+                </p>
+                <a class="product__button product__button--cart" href="">
+                  <span class="visually-hidden">Положить в корзину</span>
+                </a>
+              </div>
+              <picture class="product__media">
+                <source type="image/webp" srcset="img/product/product-8.webp, img/product/product-8@2x.webp 2x">
+                <img class="product__image" src="img/product/product-8.png" srcset="img/product/product-8@2x.png 2x" width="168" height="168" alt="Мороженое Клубничка">
+              </picture>
+            </article>
+            <article class="product">
+              <div class="product__content">
+                <h3 class="product__title title-four">Лимон</h3>
+                <p class="product__description">Освежающий лимонный сорбет</p>
+              </div>
+              <div class="product__price">
+                <p class="title-four">310
+                  <span class="product__currency">₽</span>
+                  /
+                  <span class="product__weight">кг</span>
+                </p>
+                <a class="product__button product__button--cart" href="">
+                  <span class="visually-hidden">Положить в корзину</span>
+                </a>
+              </div>
+              <picture class="product__media">
+                <source type="image/webp" srcset="img/product/product-9.webp, img/product/product-9@2x.webp 2x">
+                <img class="product__image" src="img/product/product-9.png" srcset="img/product/product-9@2x.png 2x" width="168" height="168" alt="Мороженое Лимон">
+              </picture>
+            </article>
+            <article class="product">
+              <div class="product__content">
+                <h3 class="product__title title-four">Ментол</h3>
+                <p class="product__description">Сливочный пломбир<br> с ментоловым сиропом</p>
+              </div>
+              <div class="product__price">
+                <p class="title-four">320
+                  <span class="product__currency">₽</span>
+                  /
+                  <span class="product__weight">кг</span>
+                </p>
+                <a class="product__button product__button--cart" href="">
+                  <span class="visually-hidden">Положить в корзину</span>
+                </a>
+              </div>
+              <picture class="product__media">
+                <source type="image/webp" srcset="img/product/product-10.webp, img/product/product-10@2x.webp 2x">
+                <img class="product__image" src="img/product/product-10.png" srcset="img/product/product-10@2x.png 2x" width="168" height="168" alt="Мороженое Ментол">
+              </picture>
+            </article>
+            <article class="product">
+              <div class="product__content">
+                <h3 class="product__title title-four">Орешек</h3>
+                <p class="product__description">Фисташковый пломбир с шоколадным сиропом</p>
+              </div>
+              <div class="product__price">
+                <p class="title-four">360
+                  <span class="product__currency">₽</span>
+                  /
+                  <span class="product__weight">кг</span>
+                </p>
+                <a class="product__button product__button--cart" href="">
+                  <span class="visually-hidden">Положить в корзину</span>
+                </a>
+              </div>
+              <picture class="product__media">
+                <source type="image/webp" srcset="img/product/product-11.webp, img/product/product-11@2x.webp 2x">
+                <img class="product__image" src="img/product/product-11.png" srcset="img/product/product-11@2x.png 2x" width="168" height="168" alt="Мороженое Орешек">
+              </picture>
+            </article>
+            <article class="product">
+              <div class="product__content">
+                <h3 class="product__title title-four">Крем-брюле</h3>
+                <p class="product__description">Классическое <br>крем-брюле</p>
+              </div>
+              <div class="product__price">
+                <p class="title-four">280
+                  <span class="product__currency">₽</span>
+                  /
+                  <span class="product__weight">кг</span>
+                </p>
+                <a class="product__button product__button--cart" href="">
+                  <span class="visually-hidden">Положить в корзину</span>
+                </a>
+              </div>
+              <picture class="product__media">
+                <source type="image/webp" srcset="img/product/product-12.webp, img/product/product-12@2x.webp 2x">
+                <img class="product__image" src="img/product/product-12.png" srcset="img/product/product-12@2x.png 2x" width="168" height="168" alt="Мороженое Крем-брюле">
+              </picture>
+            </article>
           </div>
-          <div class="product__price">
-            <p class="title-four">340
-              <span class="product__currency">₽</span>
-              /
-              <span class="product__weight">кг</span>
-            </p>
-            <a class="product__button product__button--cart" href="">
-              <span class="visually-hidden">Положить в корзину</span>
+          <footer class="catalog__footer">
+            <button class="button button--more" type="button">Показать ещё</button>
+            <ul class="pagination">
+              <li class="pagination__item pagination__item--button">
+                <button class="pagination__button pagination__button-prev" type="button" disabled>
+                  <span class="visually-hidden">Предыдущая страница</span>
+                </button>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__button pagination__button--active" href="">1</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__button" href="">2</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__button" href="">3</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__button" href="">4</a>
+              </li>
+              <li class="pagination__item">
+                <a class="pagination__button" href="">5</a>
+              </li>
+              <li class="pagination__item pagination__item--button">
+                <button class="pagination__button pagination__button-next" type="button">
+                  <span class="visually-hidden">Следующая страница</span>
+                </button>
+              </li>
+            </ul>
+          </footer>
+        </section>
+      </main>
+      <footer class="main-footer" >
+        <ul class="social main-footer__social">
+          <li class="social__item">
+            <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
+              <span class="visually-hidden">Телеграмм</span>
             </a>
-          </div>
-          <picture class="product__media">
-            <source type="image/webp" srcset="img/product/product-2.webp, img/product/product-2@2x.webp 2x">
-            <img class="product__image" src="img/product/product-2.png" srcset="img/product/product-2@2x.png 2x" width="168" height="168" alt="Мороженое Фисташка">
-          </picture>
-        </article>
-        <article class="product">
-          <div class="product__content">
-            <h3 class="product__title title-four">Черника</h3>
-            <p class="product__description">Крем-брюле <br>с черничным джемом</p>
-          </div>
-          <div class="product__price">
-            <p class="title-four">330
-              <span class="product__currency">₽</span>
-              /
-              <span class="product__weight">кг</span>
-            </p>
-            <a class="product__button product__button--cart" href="">
-              <span class="visually-hidden">Положить в корзину</span>
-            </a>
-          </div>
-          <picture class="product__media">
-            <source type="image/webp" srcset="img/product/product-3.webp, img/product/product-3@2x.webp 2x">
-            <img class="product__image" src="img/product/product-3.png" srcset="img/product/product-3@2x.png 2x" width="168" height="168" alt="Мороженое Черника">
-          </picture>
-        </article>
-        <article class="product">
-          <div class="product__content">
-            <h3 class="product__title title-four">Бабл-гам</h3>
-            <p class="product__description">Ванильный пломбир <br>со сладкой посыпкой</p>
-          </div>
-          <div class="product__price">
-            <p class="title-four">320
-              <span class="product__currency">₽</span>
-              /
-              <span class="product__weight">кг</span>
-            </p>
-            <a class="product__button product__button--cart" href="">
-              <span class="visually-hidden">Положить в корзину</span>
-            </a>
-          </div>
-          <picture class="product__media">
-            <source type="image/webp" srcset="img/product/product-4.webp, img/product/product-4@2x.webp 2x">
-            <img class="product__image" src="img/product/product-4.png" srcset="img/product/product-4@2x.png 2x" width="168" height="168" alt="Мороженое Бабл-гам">
-          </picture>
-        </article>
-        <article class="product">
-          <div class="product__content">
-            <h3 class="product__title title-four">Ежевика</h3>
-            <p class="product__description">Сливочное мороженое с ежевичным джемом</p>
-          </div>
-          <div class="product__price">
-            <p class="title-four">330
-              <span class="product__currency">₽</span>
-              /
-              <span class="product__weight">кг</span>
-            </p>
-            <a class="product__button product__button--cart" href="">
-              <span class="visually-hidden">Положить в корзину</span>
-            </a>
-          </div>
-          <picture class="product__media">
-            <source type="image/webp" srcset="img/product/product-5.webp, img/product/product-5@2x.webp 2x">
-            <img class="product__image" src="img/product/product-5.png" srcset="img/product/product-5@2x.png 2x" width="168" height="168" alt="Мороженое Ежевика">
-          </picture>
-        </article>
-        <article class="product">
-          <div class="product__content">
-            <h3 class="product__title title-four">Банан</h3>
-            <p class="product__description">Сливочный пломбир <br>с банановым вкусом</p>
-          </div>
-          <div class="product__price">
-            <p class="title-four">340
-              <span class="product__currency">₽</span>
-              /
-              <span class="product__weight">кг</span>
-            </p>
-            <a class="product__button product__button--cart" href="">
-              <span class="visually-hidden">Положить в корзину</span>
-            </a>
-          </div>
-          <picture class="product__media">
-            <source type="image/webp" srcset="img/product/product-6.webp, img/product/product-6@2x.webp 2x">
-            <img class="product__image" src="img/product/product-6.png" srcset="img/product/product-6@2x.png 2x" width="168" height="168" alt="Мороженое Банан">
-          </picture>
-        </article>
-        <article class="product">
-          <div class="product__content">
-            <h3 class="product__title title-four">Шоколадка</h3>
-            <p class="product__description">Классический шоколадный пломбир</p>
-          </div>
-          <div class="product__price">
-            <p class="title-four">270
-              <span class="product__currency">₽</span>
-              /
-              <span class="product__weight">кг</span>
-            </p>
-            <a class="product__button product__button--cart" href="">
-              <span class="visually-hidden">Положить в корзину</span>
-            </a>
-          </div>
-          <picture class="product__media">
-            <source type="image/webp" srcset="img/product/product-7.webp, img/product/product-7@2x.webp 2x">
-            <img class="product__image" src="img/product/product-7.png" srcset="img/product/product-7@2x.png 2x" width="168" height="168" alt="Мороженое Шоколадка">
-          </picture>
-        </article>
-        <article class="product">
-          <div class="product__content">
-            <h3 class="product__title title-four">Клубничка</h3>
-            <p class="product__description">Сливочный пломбир <br>с клубничным вкусом</p>
-          </div>
-          <div class="product__price">
-            <p class="title-four">300
-              <span class="product__currency">₽</span>
-              /
-              <span class="product__weight">кг</span>
-            </p>
-            <a class="product__button product__button--cart" href="">
-              <span class="visually-hidden">Положить в корзину</span>
-            </a>
-          </div>
-          <picture class="product__media">
-            <source type="image/webp" srcset="img/product/product-8.webp, img/product/product-8@2x.webp 2x">
-            <img class="product__image" src="img/product/product-8.png" srcset="img/product/product-8@2x.png 2x" width="168" height="168" alt="Мороженое Клубничка">
-          </picture>
-        </article>
-        <article class="product">
-          <div class="product__content">
-            <h3 class="product__title title-four">Лимон</h3>
-            <p class="product__description">Освежающий лимонный сорбет</p>
-          </div>
-          <div class="product__price">
-            <p class="title-four">310
-              <span class="product__currency">₽</span>
-              /
-              <span class="product__weight">кг</span>
-            </p>
-            <a class="product__button product__button--cart" href="">
-              <span class="visually-hidden">Положить в корзину</span>
-            </a>
-          </div>
-          <picture class="product__media">
-            <source type="image/webp" srcset="img/product/product-9.webp, img/product/product-9@2x.webp 2x">
-            <img class="product__image" src="img/product/product-9.png" srcset="img/product/product-9@2x.png 2x" width="168" height="168" alt="Мороженое Лимон">
-          </picture>
-        </article>
-        <article class="product">
-          <div class="product__content">
-            <h3 class="product__title title-four">Ментол</h3>
-            <p class="product__description">Сливочный пломбир<br> с ментоловым сиропом</p>
-          </div>
-          <div class="product__price">
-            <p class="title-four">320
-              <span class="product__currency">₽</span>
-              /
-              <span class="product__weight">кг</span>
-            </p>
-            <a class="product__button product__button--cart" href="">
-              <span class="visually-hidden">Положить в корзину</span>
-            </a>
-          </div>
-          <picture class="product__media">
-            <source type="image/webp" srcset="img/product/product-10.webp, img/product/product-10@2x.webp 2x">
-            <img class="product__image" src="img/product/product-10.png" srcset="img/product/product-10@2x.png 2x" width="168" height="168" alt="Мороженое Ментол">
-          </picture>
-        </article>
-        <article class="product">
-          <div class="product__content">
-            <h3 class="product__title title-four">Орешек</h3>
-            <p class="product__description">Фисташковый пломбир с шоколадным сиропом</p>
-          </div>
-          <div class="product__price">
-            <p class="title-four">360
-              <span class="product__currency">₽</span>
-              /
-              <span class="product__weight">кг</span>
-            </p>
-            <a class="product__button product__button--cart" href="">
-              <span class="visually-hidden">Положить в корзину</span>
-            </a>
-          </div>
-          <picture class="product__media">
-            <source type="image/webp" srcset="img/product/product-11.webp, img/product/product-11@2x.webp 2x">
-            <img class="product__image" src="img/product/product-11.png" srcset="img/product/product-11@2x.png 2x" width="168" height="168" alt="Мороженое Орешек">
-          </picture>
-        </article>
-        <article class="product">
-          <div class="product__content">
-            <h3 class="product__title title-four">Крем-брюле</h3>
-            <p class="product__description">Классическое <br>крем-брюле</p>
-          </div>
-          <div class="product__price">
-            <p class="title-four">280
-              <span class="product__currency">₽</span>
-              /
-              <span class="product__weight">кг</span>
-            </p>
-            <a class="product__button product__button--cart" href="">
-              <span class="visually-hidden">Положить в корзину</span>
-            </a>
-          </div>
-          <picture class="product__media">
-            <source type="image/webp" srcset="img/product/product-12.webp, img/product/product-12@2x.webp 2x">
-            <img class="product__image" src="img/product/product-12.png" srcset="img/product/product-12@2x.png 2x" width="168" height="168" alt="Мороженое Крем-брюле">
-          </picture>
-        </article>
-      </div>
-      <footer class="catalog__footer">
-        <button class="button button--more" type="button">Показать ещё</button>
-        <ul class="pagination">
-          <li class="pagination__item pagination__item--button">
-            <button class="pagination__button pagination__button-prev" type="button" disabled>
-              <span class="visually-hidden">Предыдущая страница</span>
-            </button>
           </li>
-          <li class="pagination__item">
-            <a class="pagination__button pagination__button--active" href="">1</a>
+          <li class="social__item">
+            <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
+              <span class="visually-hidden">Вконтакте</span>
+            </a>
           </li>
-          <li class="pagination__item">
-            <a class="pagination__button" href="">2</a>
-          </li>
-          <li class="pagination__item">
-            <a class="pagination__button" href="">3</a>
-          </li>
-          <li class="pagination__item">
-            <a class="pagination__button" href="">4</a>
-          </li>
-          <li class="pagination__item">
-            <a class="pagination__button" href="">5</a>
-          </li>
-          <li class="pagination__item pagination__item--button">
-            <button class="pagination__button pagination__button-next" type="button">
-              <span class="visually-hidden">Следующая страница</span>
-            </button>
+          <li class="social__item">
+            <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
+              <span class="visually-hidden">Youtube</span>
+            </a>
           </li>
         </ul>
+        <ul class="footer-menu">
+          <li class="footer-menu__item footer-menu__item--favorite">
+            <a class="footer-menu__link" href="">Для поставщиков</a>
+          </li>
+          <li class="footer-menu__item">
+            <a class="footer-menu__link" href="">Наши документы</a>
+          </li>
+          <li class="footer-menu__item ">
+            <a class="footer-menu__link" href="">О производстве</a>
+          </li>
+          <li class="footer-menu__item">
+            <a class="footer-menu__link" href="">Экологические стандарты</a>
+          </li>
+        </ul>
+        <div class="copyright main-footer__copyright">
+          <a class="copyright__logo-link" href="https://htmlacademy.ru/">
+            <img class="copyright__logo-img" src="img/logo/logo-htmlacademy.svg" width="93" height="27" alt="Логотип обучающего центра - htmlacademy">
+          </a>
+          <p class="copyright__text">
+            Сделано в <a class="copyright__link" href="https://htmlacademy.ru/">.html academy</a> © 2021
+          </p>
+        </div>
       </footer>
-    </section>
-  </main>
-  <footer class="main-footer" >
-    <ul class="social main-footer__social">
-      <li class="social__item">
-        <a class="social__link social__link--telegram" href="https://t.me/htmlacademy">
-          <span class="visually-hidden">Телеграмм</span>
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--vk" href="https://vk.com/htmlacademy">
-          <span class="visually-hidden">Вконтакте</span>
-        </a>
-      </li>
-      <li class="social__item">
-        <a class="social__link social__link--youtube" href="https://www.youtube.com/user/htmlacademyru">
-          <span class="visually-hidden">Youtube</span>
-        </a>
-      </li>
-    </ul>
-    <ul class="footer-menu">
-      <li class="footer-menu__item footer-menu__item--favorite">
-        <a class="footer-menu__link" href="">Для поставщиков</a>
-      </li>
-      <li class="footer-menu__item">
-        <a class="footer-menu__link" href="">Наши документы</a>
-      </li>
-      <li class="footer-menu__item ">
-        <a class="footer-menu__link" href="">О производстве</a>
-      </li>
-      <li class="footer-menu__item">
-        <a class="footer-menu__link" href="">Экологические стандарты</a>
-      </li>
-    </ul>
-    <div class="copyright main-footer__copyright">
-      <a class="copyright__logo-link" href="https://htmlacademy.ru/">
-        <img class="copyright__logo-img" src="img/logo/logo-htmlacademy.svg" width="93" height="27" alt="Логотип обучающего центра - htmlacademy">
-      </a>
-      <p class="copyright__text">
-        Сделано в <a class="copyright__link" href="https://htmlacademy.ru/">.html academy</a> © 2021
-      </p>
     </div>
-  </footer>
-</div>
-<!-- убрать класс modal--hidden и добавить класс modal--show для отображения modal -->
-<div class="modal modal--hidden">
-  <div class="modal__overlay"></div>
-  <div class="modal__container">
-    <h2 class="modal__title title-three">Мы обязательно ответим вам!</h2>
-    <form class="modal__form" action="/" method="POST">
-      <label class="visually-hidden" for="name-modal">
-        Введите ваше Имя и Фамилию
-      </label>
-      <input class="input modal__input" id="name-modal" type="text" name="name" placeholder="Имя и фамилия" required>
-      <label class="visually-hidden" for="email-modal">
-        Введите ваш email
-      </label>
-      <input class="input modal__input" id="email-modal" type="email" name="email" placeholder="email@example.com" required>
-      <label class="visually-hidden" for="message">
-        Введите сообщение в свободной форме
-      </label>
-      <textarea class="input modal__textarea" id="message" name="message" placeholder="В свободной форме" required></textarea>
-      <button class="button-other modal__button" type="submit">Отправить</button>
-    </form>
-    <button class="button-close modal__button-close" type="button">
-    </button>
-  </div>
-</div>
-</body>
+  <script src="js/main.js" type="module"></script>
+  </body>
 </html>
