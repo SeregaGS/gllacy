@@ -53,9 +53,14 @@
             <button class="header-button form-search__button" type="button">
               <span class="visually-hidden">Кнопка поиск</span>
             </button>
-            <label class="dropdown">
-              <input class="input form-search__input" id="search" type="search" placeholder="Поиск по сайту">
-            </label>
+            <div class="dropdown">
+              <label for="search">
+                <input class="input form-search__input" id="search" type="search" placeholder="Поиск по сайту">
+              </label>
+              <button class="button-close button-close--reset" type="reset">
+                <span class="visually-hidden">Удалить набранное</span>
+              </button>
+            </div>
           </form>
           <div class="container-login">
             <a class="header-button button-login" href="">
