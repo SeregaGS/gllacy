@@ -265,6 +265,13 @@ input[type="number"] {
   height: fit-content;
   margin-left: auto;
 }
+.button-close--reset {
+  display: none;
+  position: absolute;
+  top: 50%;
+  right: 25px;
+  transform: translateY(-50%);
+}
 
 .input {
   padding: 14px 16px;
@@ -564,6 +571,7 @@ input[type="number"] {
   left: auto;
 }
 .form-search__input {
+  padding-right: 30px;
   width: 324px;
 }
 
@@ -1924,7 +1932,7 @@ input[type="number"] {
 }
 .toggle-range__button {
   position: absolute;
-  top: 0;
+  top: 50%;
   display: inline-flex;
   width: 16px;
   height: 16px;
@@ -1935,6 +1943,7 @@ input[type="number"] {
   cursor: pointer;
   z-index: 35;
   transition: background-color 0.05s, border-color 0.05s;
+  transform: translate(-50%, -50%);
 }
 .toggle-range__button:hover {
   background-color: var(--basic-color-extradark);
