@@ -74,6 +74,21 @@ const initDropdown = () => {
   headerMenuCart.addEventListener('click', openDropdownButton);
 
 }
+const inputSearchReset = () => {
+  if(!DOMElements.header) return;
+
+  const searchInput = DOMElements.header.querySelector('.form-search__input');
+  const buttonReset = DOMElements.header.querySelector('.button-close--reset');
+
+  searchInput.addEventListener('input', e => {
+    buttonReset.style.display = 'block';
+  })
+
+  buttonReset.addEventListener('click', e => {
+    searchInput.focus();
+    buttonReset.style.display = 'none';
+  })
+}
 const initModal = () => {
   if(!DOMElements.modal || !DOMElements.openModalButton) return;
 
@@ -177,6 +192,7 @@ const initSlider = () => {
 
 }
 
+inputSearchReset();
 initDropdown();
 initModal();
 initSlider();
